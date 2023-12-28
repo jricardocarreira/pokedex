@@ -20,6 +20,7 @@ export const vars = createGlobalTheme("#root", {
         lightBackground: "#fff",
         lightCardsBackground: "#F5F7FF",
         lightHover: "#e5e7ee",
+        buttonBackground: "#FC800D",
 
         darkbackground: "#222",
         darkCardsBackground: "#333"

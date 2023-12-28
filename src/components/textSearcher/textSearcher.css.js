@@ -2,12 +2,13 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
 
 export const textSearcherStyle = style ({
-    display: "flex"
-
+    display: "flex",
+    gap: vars.space.small
 })
 
 export const textInputStyle = style ({
     fontSize: vars.fontSize.large,
+    fontWeight: 400,
     color: vars.colors.darkCardsBackground,
     background: vars.colors.lightCardsBackground,
     width: "372px",
@@ -23,12 +24,14 @@ export const textInputStyle = style ({
 })
 
 export const searchButtonStyle = style ({
-    
+    backgroundColor: vars.colors.buttonBackground,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    widht: "50px",
+    width: "50px",
     height: "50px",
     borderRadius: "10px",
-    border: "none"
+    border: "none",
+    boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)"
+
 })
