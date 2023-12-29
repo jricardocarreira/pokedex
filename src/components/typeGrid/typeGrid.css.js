@@ -3,6 +3,7 @@ import { vars } from "../../styles/constants.css";
 
 export const typeGridStyle = style ({
     display: "grid",
-    gridTemplateColumns: "repeat(6, minmax(57px, 114px))",
+    flexGrow: 1,
+    gridTemplateColumns: "repeat(6, minmax(76px, 1fr))",
     gap: vars.space.small
 })

@@ -3,15 +3,16 @@ import { vars } from "../../styles/constants.css";
 
 export const textSearcherStyle = style ({
     display: "flex",
+    flexGrow: 1,
     gap: vars.space.small
 })
 
 export const textInputStyle = style ({
+    flexGrow: 1,
     fontSize: vars.fontSize.medium,
     fontWeight: 400,
     color: vars.colors.darkCardsBackground,
     background: vars.colors.lightCardsBackground,
-    maxWidth: "372px",
     height: "48px",
     padding: `0 ${vars.space.small}`,
     borderRadius: "10px",

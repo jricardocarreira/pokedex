@@ -7,7 +7,7 @@ export const filterSectionStyle = style ({
     alignItems: "center",
     backgroundColor: vars.colors.lightBackground,
     width: "100%",
-    height: "192px",
-    padding: `0 ${vars.space.large}`,
-    gap: vars.space.medium
+    padding: `${vars.space.medium} ${vars.space.large}`,
+    gap: vars.space.medium,
+    flexWrap: "wrap"
 })
