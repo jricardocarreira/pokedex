@@ -1,5 +1,5 @@
 import { typeButtonStyle } from "./typeButton.css"
 
-export const TypeButton = ({text}) => {
-    return <button className={typeButtonStyle}>{text}</button>
+export const TypeButton = ({content}) => {
+    return <button className={typeButtonStyle}>{content}</button>
 }

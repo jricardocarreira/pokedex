@@ -1,12 +1,12 @@
 import { TextSearcher } from "../textSearcher/TextSearcher"
-import { TypeFilter } from "../typeFilter/TypeFilter"
+import { TypeGrid } from "../typeGrid/TypeGrid"
 import { filterSectionStyle } from "./filterSection.css"
 
 export const FilterSection = () => {
     return (
         <div className={filterSectionStyle}>
             <TextSearcher />
-            <TypeFilter />
+            <TypeGrid />
         </div>
     )
 }

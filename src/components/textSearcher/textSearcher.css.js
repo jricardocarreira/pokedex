@@ -7,19 +7,21 @@ export const textSearcherStyle = style ({
 })
 
 export const textInputStyle = style ({
-    fontSize: vars.fontSize.large,
+    fontSize: vars.fontSize.medium,
     fontWeight: 400,
     color: vars.colors.darkCardsBackground,
     background: vars.colors.lightCardsBackground,
-    width: "372px",
-    height: "50px",
+    maxWidth: "372px",
+    height: "48px",
     padding: `0 ${vars.space.small}`,
     borderRadius: "10px",
     border: "none",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
 
     "::placeholder": {
         color: "#D5D7DD",
-        overflow: "visible",
     }
 })
 
@@ -28,10 +30,10 @@ export const searchButtonStyle = style ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "50px",
-    height: "50px",
+    width: "48px",
+    height: "48px",
     borderRadius: "10px",
     border: "none",
-    boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)"
+    boxShadow: vars.shadow
 
 })

@@ -4,5 +4,6 @@ globalStyle('*', {
   padding: 0,
   margin: 0,
   boxSizing: "border-box",
-  fontFamily: "Josefin Sans"
+  fontFamily: "Josefin Sans",
+  listStyle: "none",
 });

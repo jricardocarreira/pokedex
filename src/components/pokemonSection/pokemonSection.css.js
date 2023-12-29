@@ -1,13 +1,11 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
 
-export const filterSectionStyle = style ({
+export const pokemonSectionStyle = style ({
     display: "flex",
-    justifyContent: "space-between",
+    flexDirection: "column",
     alignItems: "center",
-    backgroundColor: vars.colors.lightBackground,
     width: "100%",
-    height: "192px",
-    padding: `0 ${vars.space.large}`,
+    padding: `0 ${vars.space.large} ${vars.space.mediumLarge}`,
     gap: vars.space.medium
 })

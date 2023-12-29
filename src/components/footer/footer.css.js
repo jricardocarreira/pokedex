@@ -1,13 +1,12 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
 
-export const filterSectionStyle = style ({
+export const footerStyle = style ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: vars.colors.lightBackground,
     width: "100%",
-    height: "192px",
+    height: vars.space.mediumLarge,
     padding: `0 ${vars.space.large}`,
-    gap: vars.space.medium
+    backgroundColor: vars.colors.lightBackground,
 })

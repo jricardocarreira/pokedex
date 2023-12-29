@@ -7,11 +7,14 @@ export const typeButtonStyle = style ({
     alignItems: "center",
     fontSize: vars.fontSize.medium,
     fontWeight: 400,
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
     color: vars.colors.darkCardsBackground,
     background: vars.colors.lightCardsBackground,
-    width: "114px",
+    width: '100%',
     height: vars.space.medium,
     borderRadius: "4px",
     border: "none",
-    boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)"
+    boxShadow: vars.shadow
 })
