@@ -35,6 +35,6 @@ export const searchButtonStyle = style ({
     height: "48px",
     borderRadius: "10px",
     border: "none",
-    boxShadow: vars.shadow
+    boxShadow: vars.shadows.default
 
 })

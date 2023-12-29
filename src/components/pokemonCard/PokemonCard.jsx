@@ -1,16 +1,19 @@
-import { cardTypeContainerStyle, cardTypeStyle, pokemonCardStyle, pokemonNameStyle } from "./pokemonCard.css"
+import { pokemonCardStyle, pokemonNameStyle, cardTypeContainerStyle, cardTypeStyle, imageStyle } from './pokemonCard.css';
 
-export const PokemonCard = ({src, content, text}) => {
+export const PokemonCard = ({ image, name, types }) => {
     return (
         <li className={pokemonCardStyle}>
-            <img src="./src/images/bulbassaur.png"/>
+            <img className={imageStyle} src={image} alt={name} />
 
-            <p className={pokemonNameStyle}>Bulbassaur</p>
+            <p className={pokemonNameStyle}>{name}</p>
 
             <ul className={cardTypeContainerStyle}>
-                <li className={cardTypeStyle}>grass</li>
-                <li className={cardTypeStyle}>poison</li>
+                {types.map((type, index) => (
+                    <li key={index} className={cardTypeStyle}>
+                        {type}
+                    </li>
+                ))}
             </ul>
         </li>
-    )
-}
+    );
+};

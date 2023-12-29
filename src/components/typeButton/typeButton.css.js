@@ -16,5 +16,5 @@ export const typeButtonStyle = style ({
     height: vars.space.medium,
     borderRadius: "4px",
     border: "none",
-    boxShadow: vars.shadow
+    boxShadow: vars.shadows.default
 })

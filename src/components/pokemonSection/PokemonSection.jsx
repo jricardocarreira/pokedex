@@ -1,12 +1,11 @@
-import { CardGrid } from "../cardGrid/CardGrid"
 import { LoadMoreButton } from "../loadMoreButton/LoadMoreButton"
-import { PokemonCard } from "../pokemonCard/PokemonCard"
+import PokemonCardGrid from "../pokemonCardGrid/PokemonCardGrid"
 import { pokemonSectionStyle } from "./pokemonSection.css"
 
 export const PokemonSection = () => {
     return (
         <div className={pokemonSectionStyle}>
-            <CardGrid />
+            <PokemonCardGrid />
             <LoadMoreButton />
         </div>
     )

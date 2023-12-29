@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
 
-export const cardGridStyle = style ({
+export const PokemonCardGridStyle = style ({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",

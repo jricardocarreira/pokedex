@@ -3,15 +3,31 @@ import { vars } from "../../styles/constants.css";
 
 export const pokemonCardStyle = style({
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "end",
     alignItems: "center",
     flexDirection: "column",
     width: "236px",
     height: "307px",
+    gap: vars.space.small,
     paddingBottom: vars.space.medium,
     backgroundColor: vars.colors.lightCardsBackground,
     borderRadius: "10px",
-    boxShadow: vars.shadow
+    boxShadow: vars.shadows.default,
+    transition: "0.3s",
+    ":hover": {
+        transform: "scale(1.1)",
+        boxShadow: vars.shadows.hover,
+    },
+})
+
+export const imageStyle = style({
+    height: "192px",
+    transition: "transform 0.3s",
+    selectors: {
+        [`${pokemonCardStyle}:hover &`]: {
+            transform: "scale(1.3)",
+        },
+    },
 })
 
 export const pokemonNameStyle = style({
@@ -19,14 +35,14 @@ export const pokemonNameStyle = style({
     fontSize: vars.fontSize.large,
 })
 
-export const cardTypeContainerStyle = style ({
+export const cardTypeContainerStyle = style({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     gap: vars.space.small
 })
 
-export const cardTypeStyle = style ({
+export const cardTypeStyle = style({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
