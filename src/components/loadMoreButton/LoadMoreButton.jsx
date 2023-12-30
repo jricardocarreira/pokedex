@@ -1,5 +1,5 @@
 import { loadMoreButtonStyle } from "./loadMoreButton.css"
 
-export const LoadMoreButton = () => {
-    return <button className={loadMoreButtonStyle}>Load more Pokemon</button>
+export const LoadMoreButton = ({ onClick }) => {
+    return <button className={loadMoreButtonStyle} onClick={onClick}>Load more Pokemon</button>
 }
