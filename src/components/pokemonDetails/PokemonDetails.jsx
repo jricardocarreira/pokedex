@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchPokemonDetails } from '../../services/fetchPokemonList';
 
-export const PokemonDetailsPage = () => {
+export const PokemonDetails = () => {
   const { id } = useParams();
   const [pokemonDetails, setPokemonDetails] = useState(null);
 
