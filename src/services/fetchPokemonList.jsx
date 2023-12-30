@@ -10,14 +10,14 @@ export const fetchPokemonList = async ({ limit = 10}) => {
     console.error('Error fetching Pokemon list:', error);
     throw error;
   }
-};
+}
 
-export const fetchPokemonDetails = async (pokemonName) => {
+export const fetchPokemonDetails = async (pokemonId) => {
   try {
-    const response = await axios.get(`${baseURL}pokemon/${pokemonName}`);
+    const response = await axios.get(`${baseURL}pokemon/${pokemonId}`);
     return response.data;
   } catch (error) {
-    console.error(`Error fetching details for ${pokemonName}:`, error);
+    console.error(`Error fetching details for Pokemon with ID ${pokemonId}:`, error);
     throw error;
   }
-};
+}

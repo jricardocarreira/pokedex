@@ -4,7 +4,6 @@ import { pokemonCardStyle, pokemonNameStyle, cardTypeContainerStyle, cardTypeSty
 
 export const PokemonCard = ({ id, image, name, types }) => {
     return (
-
         <li>
             <Link to={`/pokemon/${id}`} className={pokemonCardStyle}>
                 <img className={imageStyle} src={image} alt={name} />
