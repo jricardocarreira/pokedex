@@ -18,7 +18,7 @@ export const vars = createGlobalTheme("#root", {
     },
     colors: {
         lightBackground: "#fff",
-        lightCardsBackground: "#F5F7FF",
+        lightCardsBackground: "#f5f7ff",
         lightHover: "#e5e7ee",
         buttonBackground: "#FC800D",
 
@@ -49,7 +49,7 @@ export const vars = createGlobalTheme("#root", {
     },
     shadows: {
         default: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
-        hover: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+        hover: "0px 8px 8px 0px rgba(0, 0, 0, 0.25)",
         click: "0px 1px 1px 0px rgba(0, 0, 0, 0.25)"
     }
 })

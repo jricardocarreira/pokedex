@@ -10,7 +10,6 @@ export const textSearcherStyle = style ({
 export const textInputStyle = style ({
     flexGrow: 1,
     fontSize: vars.fontSize.medium,
-    fontWeight: 400,
     color: vars.colors.darkCardsBackground,
     background: vars.colors.lightCardsBackground,
     height: "48px",

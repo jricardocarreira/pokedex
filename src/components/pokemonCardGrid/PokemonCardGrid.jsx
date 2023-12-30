@@ -27,7 +27,7 @@ const PokemonCardGrid = () => {
         <PokemonCard
           key={pokemon.id}
           name={pokemon.name}
-          image={pokemon.sprites.front_default}
+          image={pokemon.sprites.versions['generation-iv']?.['heartgold-soulsilver']?.front_default}
           types={pokemon.types.map((type) => type.type.name)}
         />
       ))}

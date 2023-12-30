@@ -15,17 +15,17 @@ export const pokemonCardStyle = style({
     boxShadow: vars.shadows.default,
     transition: "0.3s",
     ":hover": {
-        transform: "scale(1.1)",
+        transform: "scale(1.05)",
         boxShadow: vars.shadows.hover,
     },
 })
 
 export const imageStyle = style({
     height: "192px",
-    transition: "transform 0.3s",
+    transition: "transform 0.2s",
     selectors: {
         [`${pokemonCardStyle}:hover &`]: {
-            transform: "scale(1.3)",
+            transform: "scale(1.2)",
         },
     },
 })
@@ -33,6 +33,8 @@ export const imageStyle = style({
 export const pokemonNameStyle = style({
     textAlign: "center",
     fontSize: vars.fontSize.large,
+    textTransform: "capitalize",
+    color: vars.colors.darkCardsBackground,
 })
 
 export const cardTypeContainerStyle = style({
@@ -46,9 +48,9 @@ export const cardTypeStyle = style({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    fontSize: vars.fontSize.small,
     width: "86px",
     height: "24px",
     color: vars.colors.darkBackground,
-    background: vars.colors.lightBackground,
     borderRadius: "3px",
 })

@@ -4,7 +4,7 @@ const baseURL = 'https://pokeapi.co/api/v2/';
 
 export const fetchPokemonList = async () => {
   try {
-    const response = await axios.get(`${baseURL}pokemon?limit=200`);
+    const response = await axios.get(`${baseURL}pokemon?limit=500`);
     return response.data.results;
   } catch (error) {
     console.error('Error fetching Pokemon list:', error);
