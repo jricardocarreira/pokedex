@@ -6,4 +6,5 @@ globalStyle('*', {
   boxSizing: "border-box",
   fontFamily: "Play",
   listStyle: "none",
+  textDecoration: "none"
 });

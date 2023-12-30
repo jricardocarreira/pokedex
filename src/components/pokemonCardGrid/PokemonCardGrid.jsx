@@ -29,7 +29,7 @@ export const PokemonCardGrid = () => {
 
   return (
     <>
-      <ul className={PokemonCardGridStyle}>
+      <div className={PokemonCardGridStyle}>
         {pokemonList.map((pokemon) => (
           <PokemonCard
             key={pokemon.id}
@@ -38,7 +38,7 @@ export const PokemonCardGrid = () => {
             types={pokemon.types.map((type) => type.type.name)}
           />
         ))}
-      </ul>
+      </div>
       <LoadMoreButton onClick={handleLoadMoreClick} />
     </>
   )

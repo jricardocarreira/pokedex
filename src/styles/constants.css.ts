@@ -22,7 +22,7 @@ export const vars = createGlobalTheme("#root", {
         lightHover: "#e5e7ee",
         buttonBackground: "#FC800D",
 
-        darkbackground: "#222",
+        darkBackground: "#222",
         darkCardsBackground: "#333",
 
         bugType: '#729f3f',

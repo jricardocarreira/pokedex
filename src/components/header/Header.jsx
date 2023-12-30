@@ -9,8 +9,8 @@ export const Header = () => {
             </div>
 
             <nav className={navStyle}>
-                <IconContainer src="./src/icons/dark-icon.svg" />
-                <IconContainer src="./src/icons/github-20.svg" />
+                <IconContainer src="/src/icons/dark-icon.svg" />
+                <IconContainer src="/src/icons/github-20.svg" />
             </nav>
         </header>
     )
