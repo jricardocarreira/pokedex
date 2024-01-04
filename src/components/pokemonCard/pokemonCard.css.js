@@ -20,7 +20,7 @@ export const pokemonCardStyle = style({
     },
 })
 
-export const imageStyle = style({
+export const cardImageStyle = style({
     height: "192px",
     transition: "transform 0.2s",
     selectors: {
@@ -30,7 +30,7 @@ export const imageStyle = style({
     },
 })
 
-export const pokemonNameStyle = style({
+export const cardPokemonNameStyle = style({
     textAlign: "center",
     fontSize: vars.fontSize.large,
     textTransform: "capitalize",

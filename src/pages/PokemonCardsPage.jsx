@@ -1,14 +1,17 @@
 import { FilterSection } from "../components/filterSection/FilterSection"
 import { Footer } from "../components/footer/Footer"
 import { Header } from "../components/header/Header"
-import { PokemonSection } from "../components/pokemonSection/PokemonSection"
+import { PokemonCardGrid } from "../components/pokemonCardGrid/PokemonCardGrid"
+import { PokemonMainSection } from "../components/pokemonMainSection/PokemonMainSection"
 
 const PokemonCardsPage = () => {
     return (
         <>
             <Header />
             <FilterSection />
-            <PokemonSection />
+            <PokemonMainSection>
+                <PokemonCardGrid />
+            </PokemonMainSection>
             <Footer />
         </>
     )
