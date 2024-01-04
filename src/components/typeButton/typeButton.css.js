@@ -10,8 +10,6 @@ export const typeButtonStyle = style ({
     whiteSpace: "nowrap",
     overflow: "hidden",
     textOverflow: "ellipsis",
-    color: vars.colors.darkCardsBackground,
-    background: vars.colors.lightCardsBackground,
     width: '100%',
     height: vars.space.medium,
     borderRadius: "4px",

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { typeStyle } from '../../styles/typeBackground.css.js';
 import { fetchPokemonDetails } from '../../services/fetchPokemonList';
-import { pokemonDetaisStyle } from './pokemonDetails.css';
+import { detailsImageStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css';
 
 export const PokemonDetails = () => {
   const { id } = useParams();
@@ -26,10 +27,19 @@ export const PokemonDetails = () => {
 
   return (
     <div className={pokemonDetaisStyle}>
-      <div>
-        <img src={pokemonDetails.sprites?.front_default} alt={pokemonDetails.name} />
-        <p>{pokemonDetails.types.map((type) => type.type.name).join(', ')}</p>
+      <div className={mainPokemonDetailsStyle}>
+        <img className={detailsImageStyle} src={pokemonDetails.sprites?.front_default} alt={pokemonDetails.name} />
+
         <h1>{pokemonDetails.name}</h1>
+        
+        <ul className={detailsTypeContainerStyle}>
+          {pokemonDetails.types.map((type, index) => (
+            <li key={index} className={`${detailsTypeStyle} ${typeStyle} ${type.type.name}`}>
+              {type.type.name}
+            </li>
+          ))}
+        </ul>
+
       </div>
 
       <h2>Moves</h2>
