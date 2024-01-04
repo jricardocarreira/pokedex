@@ -2,6 +2,9 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "./constants.css";
 
 export const typeStyle = style({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     selectors: {
         '.bug&': {
             backgroundColor: vars.colors.bugType,

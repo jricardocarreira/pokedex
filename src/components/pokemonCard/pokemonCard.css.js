@@ -39,17 +39,16 @@ export const cardPokemonNameStyle = style({
 
 export const cardTypeContainerStyle = style({
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
+    width: "100%",
+    padding: `0 ${vars.space.smallMedium}`,
     gap: vars.space.small
 })
 
 export const cardTypeStyle = style({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     fontSize: vars.fontSize.small,
-    width: "86px",
+    width: "45.75%",
     height: "24px",
     color: vars.colors.darkBackground,
     borderRadius: "3px",

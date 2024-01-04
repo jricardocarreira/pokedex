@@ -7,7 +7,7 @@ export const pokemonDetaisStyle = style ({
     width: "100%",
     height: "80vh",
     gap: vars.space.small,
-    paddingBottom: vars.space.medium,
+    paddingBottom: vars.space.mediumLarge,
     backgroundColor: vars.colors.lightCardsBackground,
     borderRadius: "10px",
     boxShadow: vars.shadows.default,
@@ -20,7 +20,7 @@ export const mainPokemonDetailsStyle = style ({
     flexDirection: "column",
     width: "50%",
     height: "100%",
-    gap: vars.space.small,
+    gap: vars.space.medium,
 })
 
 export const detailsImageStyle = style ({
@@ -31,7 +31,7 @@ export const detailsTypeContainerStyle = style ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    gap: vars.space.small
+    gap: vars.space.smallMedium
 })
 
 export const detailsTypeStyle = style ({
