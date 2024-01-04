@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { PokemonCard } from '../pokemonCard/PokemonCard';
 import { PokemonCardGridStyle } from './pokemonCardGrid.css';
-import { fetchPokemonDetails, fetchPokemonList } from '../../services/fetchPokemonList';
 import { LoadMoreButton } from '../loadMoreButton/LoadMoreButton';
+import { fetchPokemonList } from '../../services/fetchPokemonList';
 
 export const PokemonCardGrid = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -11,10 +11,8 @@ export const PokemonCardGrid = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const results = await fetchPokemonList({ limit: visiblePokemonCount });
-        const pokemonDetailsPromises = results.map((pokemon) => fetchPokemonDetails(pokemon.name));
-        const pokemonDetails = await Promise.all(pokemonDetailsPromises);
-        setPokemonList(pokemonDetails);
+        const list = await fetchPokemonList({ limit: visiblePokemonCount });
+        setPokemonList(list);
       } catch (error) {
         console.error('Error fetching Pokemon data:', error);
       }

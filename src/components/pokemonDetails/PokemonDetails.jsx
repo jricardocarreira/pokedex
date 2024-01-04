@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { typeStyle } from '../../styles/typeBackground.css.js';
-import { fetchPokemonDetails } from '../../services/fetchPokemonList';
-import { detailsImageStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css';
+import { fetchPokemonList } from '../../services/fetchPokemonList';
+import { detailsImageStyle, detailsPokemonNameStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css';
 
 export const PokemonDetails = () => {
   const { id } = useParams();
@@ -11,7 +11,7 @@ export const PokemonDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const details = await fetchPokemonDetails(id);
+        const details = await fetchPokemonList(id);
         setPokemonDetails(details);
       } catch (error) {
         console.error('Error fetching Pokemon details:', error);
@@ -21,6 +21,8 @@ export const PokemonDetails = () => {
     fetchData();
   }, [id]);
 
+  console.log(pokemonDetails)
+
   if (!pokemonDetails) {
     return <div>Loading...</div>;
   }
@@ -28,14 +30,14 @@ export const PokemonDetails = () => {
   return (
     <div className={pokemonDetaisStyle}>
       <div className={mainPokemonDetailsStyle}>
-        <img className={detailsImageStyle} src={pokemonDetails.sprites?.front_default} alt={pokemonDetails.name} />
+        <img className={detailsImageStyle} src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
 
-        <h1>{pokemonDetails.name}</h1>
+        <p className={detailsPokemonNameStyle}>{pokemonDetails.name}</p>
         
         <ul className={detailsTypeContainerStyle}>
-          {pokemonDetails.types.map((type, index) => (
-            <li key={index} className={`${detailsTypeStyle} ${typeStyle} ${type.type.name}`}>
-              {type.type.name}
+          {pokemonDetails.types.map((types, index) => (
+            <li key={index} className={`${detailsTypeStyle} ${typeStyle} ${types.type.name}`}>
+              {types.type.name}
             </li>
           ))}
         </ul>
@@ -44,8 +46,8 @@ export const PokemonDetails = () => {
 
       <h2>Moves</h2>
       <ul>
-        {pokemonDetails.moves?.map((move) => (
-          <li key={move.move.name}>{move.move.name}</li>
+        {pokemonDetails.moves?.map((moves) => (
+          <li key={moves.move.name}>{moves.move.name}</li>
         ))}
       </ul>
       <h2>Abilities</h2>

@@ -27,20 +27,23 @@ export const detailsImageStyle = style ({
     flexGrow: 1
 })
 
+export const detailsPokemonNameStyle = style ({
+    fontSize: vars.fontSize.large,
+    textTransform: "capitalize",
+    color: vars.colors.darkCardsBackground,
+})
+
 export const detailsTypeContainerStyle = style ({
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
+    width: "100%",
     gap: vars.space.smallMedium
 })
 
 export const detailsTypeStyle = style ({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: vars.fontSize.large,
-    width: "86px",
-    height: "36px",
-    color: vars.colors.darkBackground,
-    borderRadius: "3px",
+    fontSize: vars.fontSize.medium,
+    width: "20%",
+    height: vars.space.medium,
+    borderRadius: "4px",
 })
