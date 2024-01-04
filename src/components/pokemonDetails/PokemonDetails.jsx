@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { typeStyle } from '../../styles/typeBackground.css.js';
-import { fetchPokemonList } from '../../services/fetchPokemonList';
+import { fetchPokemonDetails } from '../../services/fetchPokemonList';
 import { detailsImageStyle, detailsPokemonNameStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css';
 
 export const PokemonDetails = () => {
@@ -11,7 +11,7 @@ export const PokemonDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const details = await fetchPokemonList(id);
+        const details = await fetchPokemonDetails(id);
         setPokemonDetails(details);
       } catch (error) {
         console.error('Error fetching Pokemon details:', error);
@@ -20,8 +20,6 @@ export const PokemonDetails = () => {
 
     fetchData();
   }, [id]);
-
-  console.log(pokemonDetails)
 
   if (!pokemonDetails) {
     return <div>Loading...</div>;
