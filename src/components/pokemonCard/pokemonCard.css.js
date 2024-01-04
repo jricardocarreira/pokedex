@@ -6,7 +6,7 @@ export const pokemonCardStyle = style({
     justifyContent: "end",
     alignItems: "center",
     flexDirection: "column",
-    width: "236px",
+    width: "100%",
     height: "307px",
     gap: vars.space.small,
     paddingBottom: vars.space.medium,
