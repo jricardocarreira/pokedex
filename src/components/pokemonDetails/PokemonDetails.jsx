@@ -1,24 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { typeStyle } from '../../styles/typeBackground.css.js'
-import { fetchPokemonDetails, fetchPokemonAbilities } from '../../services/fetchPokemonList'
-import { detailsImageStyle, detailsPokemonNameStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { typeStyle } from '../../styles/typeBackground.css.js';
+import { fetchPokemonDetails } from '../../services/fetchApi.jsx';
+import { detailsImageStyle, detailsPokemonNameStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css';
 
 export const PokemonDetails = () => {
   const { id } = useParams();
-  const [pokemonDetails, setPokemonDetails] = useState(null)
-  const [pokemonAbilities, setPokemonAbilities] = useState(null)
+  const [pokemonDetails, setPokemonDetails] = useState(null);
+  const [abilitiesDetails, setAbilitiesDetails] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const details = await fetchPokemonDetails(id)
-        setPokemonDetails(details)
+        const details = await fetchPokemonDetails(id);
+        setPokemonDetails(details);
 
-        const abilities = await fetchPokemonAbilities(id)
-        setPokemonAbilities(abilities);
-
-        console.log(abilities)
+        const abilities = details.abilities.map((ability) => ability.ability.url);
+        const abilitiesDetails = await fetchPokemonAbilities(abilities);
+        setAbilitiesDetails(abilitiesDetails);
 
       } catch (error) {
         console.error('Error fetching Pokemon details:', error);
@@ -28,8 +27,19 @@ export const PokemonDetails = () => {
     fetchData();
   }, [id]);
 
+  const fetchPokemonAbilities = async (abilities) => {
+    const promises = abilities.map(async (abilityUrl) => {
+      const response = await fetch(abilityUrl);
+      const data = await response.json();
+      return data;
+    });
+
+    const abilitiesData = await Promise.all(promises);
+    return abilitiesData;
+  };
+
   if (!pokemonDetails) {
-    return <p>Loading...</p>
+    return <p>Loading...</p>;
   }
 
   return (
@@ -39,9 +49,9 @@ export const PokemonDetails = () => {
         <p className={detailsPokemonNameStyle}>{pokemonDetails.name}</p>
         
         <ul className={detailsTypeContainerStyle}>
-          {pokemonDetails.types.map((types, index) => (
-            <li key={index} className={`${detailsTypeStyle} ${typeStyle} ${types.type.name}`}>
-              {types.type.name}
+          {pokemonDetails.types.map((type, index) => (
+            <li key={index} className={`${detailsTypeStyle} ${typeStyle} ${type.type.name}`}>
+              {type.type.name}
             </li>
           ))}
         </ul>
@@ -49,19 +59,19 @@ export const PokemonDetails = () => {
 
       <h2>Moves</h2>
       <ul>
-        {pokemonDetails.moves?.map((moves) => (
-          <li key={moves.move.name}>{moves.move.name}</li>
+        {pokemonDetails.moves?.map((move) => (
+          <li key={move.move.name}>{move.move.name}</li>
         ))}
       </ul>
 
       <h2>Abilities</h2>
-{/*       <ul>
-        {pokemonAbilities.map((ability) => (
-          <li key={ability.ability.name}>
-            {ability.ability.name} - {ability.ability.effect_entries[0]?.effect}
+      <ul>
+        {abilitiesDetails.map((ability, index) => (
+          <li key={index}>
+            {ability.name} - {ability.effect_entries[0]?.effect}
           </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 };
