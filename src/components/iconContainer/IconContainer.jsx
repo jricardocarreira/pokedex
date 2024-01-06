@@ -1,9 +1,9 @@
 import { iconContainerStyle } from "./iconContainer.css"
 
-export const IconContainer = ({src}) => {
+export const IconContainer = ({ src, alt }) => {
     return (
         <div className={iconContainerStyle}>
-            <img src={src}/>
+            <img src={src} alt={alt}/>
         </div>
     )
 }

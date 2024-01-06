@@ -10,8 +10,8 @@ export const Header = () => {
             </Link>
 
             <nav className={navStyle}>
-                <IconContainer src="/src/icons/dark-icon.svg" />
-                <IconContainer src="/src/icons/github-20.svg" />
+                <IconContainer src="/src/icons/dark-icon.svg" alt="Set to dark mode icon"/>
+                <IconContainer src="/src/icons/github-20.svg" alt="My GitHub"/>
             </nav>
         </header>
     )

@@ -1,18 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { typeStyle } from '../../styles/typeBackground.css.js';
-import { fetchPokemonDetails } from '../../services/fetchPokemonList';
-import { detailsImageStyle, detailsPokemonNameStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css';
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { typeStyle } from '../../styles/typeBackground.css.js'
+import { fetchPokemonDetails, fetchPokemonAbilities } from '../../services/fetchPokemonList'
+import { detailsImageStyle, detailsPokemonNameStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css'
 
 export const PokemonDetails = () => {
   const { id } = useParams();
-  const [pokemonDetails, setPokemonDetails] = useState(null);
+  const [pokemonDetails, setPokemonDetails] = useState(null)
+  const [pokemonAbilities, setPokemonAbilities] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const details = await fetchPokemonDetails(id);
-        setPokemonDetails(details);
+        const details = await fetchPokemonDetails(id)
+        setPokemonDetails(details)
+
+        const abilities = await fetchPokemonAbilities(id)
+        setPokemonAbilities(abilities);
+
+        console.log(abilities)
+
       } catch (error) {
         console.error('Error fetching Pokemon details:', error);
       }
@@ -22,14 +29,13 @@ export const PokemonDetails = () => {
   }, [id]);
 
   if (!pokemonDetails) {
-    return <div>Loading...</div>;
+    return <p>Loading...</p>
   }
 
   return (
     <div className={pokemonDetaisStyle}>
       <div className={mainPokemonDetailsStyle}>
         <img className={detailsImageStyle} src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
-
         <p className={detailsPokemonNameStyle}>{pokemonDetails.name}</p>
         
         <ul className={detailsTypeContainerStyle}>
@@ -39,7 +45,6 @@ export const PokemonDetails = () => {
             </li>
           ))}
         </ul>
-
       </div>
 
       <h2>Moves</h2>
@@ -48,14 +53,15 @@ export const PokemonDetails = () => {
           <li key={moves.move.name}>{moves.move.name}</li>
         ))}
       </ul>
+
       <h2>Abilities</h2>
-      <ul>
-        {pokemonDetails.ability?.map((ability) => (
-          <li key={ability.name}>
-            {ability.name} - {ability.effect_entries[0].effect}
+{/*       <ul>
+        {pokemonAbilities.map((ability) => (
+          <li key={ability.ability.name}>
+            {ability.ability.name} - {ability.ability.effect_entries[0]?.effect}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

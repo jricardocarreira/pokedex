@@ -6,7 +6,7 @@ export const TextSearcher = () => {
             <input placeholder="Search name or id number..." className={textInputStyle}></input>
 
             <button className={searchButtonStyle}>
-                <img src="/src/icons/search-icon.svg"/>
+                <img src="/src/icons/search-icon.svg" alt="Click to search icon"/>
             </button>
         </div>
     )

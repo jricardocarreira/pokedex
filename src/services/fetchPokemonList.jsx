@@ -21,3 +21,13 @@ export const fetchPokemonDetails = async (pokemonId) => {
     throw error;
   }
 }
+
+export const fetchPokemonAbilities = async (pokemonId) => {
+  try {
+    const response = await axios.get(`${baseURL}ability/${pokemonId}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching abilities for Pokemon with ID ${pokemonId}:`, error);
+    throw error;
+  }
+};

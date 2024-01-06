@@ -23,13 +23,17 @@ export const PokemonCardGrid = () => {
     fetchData();
   }, [visiblePokemonCount]);
 
+  if (!pokemonList) {
+    return <p>Loading...</p>
+  }
+
   const handleLoadMoreClick = () => {
     setVisiblePokemonCount((prevCount) => prevCount + 10);
   };
 
   return (
     <>
-      <div className={PokemonCardGridStyle}>
+      <ul className={PokemonCardGridStyle}>
         {pokemonList.map((pokemon) => (
           <PokemonCard
             key={pokemon.id}
@@ -39,7 +43,7 @@ export const PokemonCardGrid = () => {
             types={pokemon.types.map((type) => type.type.name)}
           />
         ))}
-      </div>
+      </ul>
       <LoadMoreButton onClick={handleLoadMoreClick} />
     </>
   )
