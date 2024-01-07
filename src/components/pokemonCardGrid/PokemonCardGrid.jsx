@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { PokemonCard } from '../pokemonCard/PokemonCard';
 import { PokemonCardGridStyle } from './pokemonCardGrid.css';
-import { fetchPokemonDetails } from '../../services/fetchApi';
+import { fetchPokemonList, fetchPokemonDetails } from '../../services/fetchApi';
 import { LoadMoreButton } from '../loadMoreButton/LoadMoreButton';
 
 export const PokemonCardGrid = () => {
@@ -11,7 +11,7 @@ export const PokemonCardGrid = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const results = await fetchPokemonDetails({ limit: visiblePokemonCount });
+        const results = await fetchPokemonList({ limit: visiblePokemonCount });
         const pokemonDetailsPromises = results.map((pokemon) => fetchPokemonDetails(pokemon.name));
         const pokemonDetails = await Promise.all(pokemonDetailsPromises);
         setPokemonList(pokemonDetails);
@@ -24,7 +24,7 @@ export const PokemonCardGrid = () => {
   }, [visiblePokemonCount]);
 
   if (!pokemonList) {
-    return <p>Loading...</p>
+    return <p>Loading...</p>;
   }
 
   const handleLoadMoreClick = () => {
@@ -46,5 +46,5 @@ export const PokemonCardGrid = () => {
       </ul>
       <LoadMoreButton onClick={handleLoadMoreClick} />
     </>
-  )
-}
+  );
+};

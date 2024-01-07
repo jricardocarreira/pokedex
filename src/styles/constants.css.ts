@@ -12,6 +12,7 @@ export const vars = createGlobalTheme("#root", {
         large: `${24 * baseUnit}px`,
     },
     fontSize: {
+        extraSmall: `${3 * baseUnit}px`,
         small: `${4 * baseUnit}px`,
         medium: `${5 * baseUnit}px`,
         large: `${6 * baseUnit}px`,
@@ -20,6 +21,7 @@ export const vars = createGlobalTheme("#root", {
         lightBackground: "#fff",
         lightCardsBackground: "#f5f7ff",
         lightHover: "#e5e7ee",
+        gray: "#999",
         buttonBackground: "#FC800D",
 
         darkBackground: "#222",

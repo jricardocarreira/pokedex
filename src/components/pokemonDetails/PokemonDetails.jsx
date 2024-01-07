@@ -1,13 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { typeStyle } from '../../styles/typeBackground.css.js';
-import { fetchPokemonDetails } from '../../services/fetchApi.jsx';
-import { detailsImageStyle, detailsPokemonNameStyle, detailsTypeContainerStyle, detailsTypeStyle, mainPokemonDetailsStyle, pokemonDetaisStyle } from './pokemonDetails.css';
+import { fetchPokemonDetails, fetchPokemonAbilities } from '../../services/fetchApi';
+import {
+  abilitiesListItemsStyle,
+  abilitiesListStyle,
+  abilityButtonStyle,
+  abilityDescriptionStyle,
+  abilityNameButtonContainerStyle,
+  abilityNameStyle,
+  detailsImageStyle,
+  detailsPokemonTextStyle,
+  detailsTypeContainerStyle,
+  detailsTypeStyle,
+  mainPokemonDetailsContainerStyle,
+  movesListItemsStyle,
+  movesListStyle,
+  pokemonAbilitiesStyle,
+  pokemonDetaisStyle,
+  pokemonIdStyle,
+  pokemonMovesAbilitiesContainerStyle,
+  pokemonMovesStyle,
+  pokemonNameTypesContainerStyle
+} from './pokemonDetails.css';
 
 export const PokemonDetails = () => {
   const { id } = useParams();
   const [pokemonDetails, setPokemonDetails] = useState(null);
-  const [abilitiesDetails, setAbilitiesDetails] = useState([]);
+  const [pokemonAbilities, setPokemonAbilities] = useState([]);
+  const [selectedAbility, setSelectedAbility] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,8 +37,8 @@ export const PokemonDetails = () => {
         setPokemonDetails(details);
 
         const abilities = details.abilities.map((ability) => ability.ability.url);
-        const abilitiesDetails = await fetchPokemonAbilities(abilities);
-        setAbilitiesDetails(abilitiesDetails);
+        const abilitiesData = await fetchPokemonAbilities(abilities);
+        setPokemonAbilities(abilitiesData);
 
       } catch (error) {
         console.error('Error fetching Pokemon details:', error);
@@ -27,15 +48,11 @@ export const PokemonDetails = () => {
     fetchData();
   }, [id]);
 
-  const fetchPokemonAbilities = async (abilities) => {
-    const promises = abilities.map(async (abilityUrl) => {
-      const response = await fetch(abilityUrl);
-      const data = await response.json();
-      return data;
-    });
-
-    const abilitiesData = await Promise.all(promises);
-    return abilitiesData;
+  const handleAbilityClick = (abilityName) => {
+    // Toggle the selected ability when clicked
+    setSelectedAbility((prevSelectedAbility) =>
+      prevSelectedAbility === abilityName ? null : abilityName
+    );
   };
 
   if (!pokemonDetails) {
@@ -44,34 +61,51 @@ export const PokemonDetails = () => {
 
   return (
     <div className={pokemonDetaisStyle}>
-      <div className={mainPokemonDetailsStyle}>
+
+      <div className={mainPokemonDetailsContainerStyle}>
         <img className={detailsImageStyle} src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
-        <p className={detailsPokemonNameStyle}>{pokemonDetails.name}</p>
-        
-        <ul className={detailsTypeContainerStyle}>
-          {pokemonDetails.types.map((type, index) => (
-            <li key={index} className={`${detailsTypeStyle} ${typeStyle} ${type.type.name}`}>
-              {type.type.name}
-            </li>
-          ))}
-        </ul>
+        <div className={pokemonNameTypesContainerStyle}>
+          <p className={detailsPokemonTextStyle}>
+            {pokemonDetails.name} <span className={pokemonIdStyle}>{`Nº ${pokemonDetails.id.toString().padStart(4, '0')}`}</span>
+          </p>
+          <ul className={detailsTypeContainerStyle}>
+            {pokemonDetails.types.map((type, index) => (
+              <li key={index} className={`${detailsTypeStyle} ${typeStyle} ${type.type.name}`}>
+                {type.type.name}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      <h2>Moves</h2>
-      <ul>
-        {pokemonDetails.moves?.map((move) => (
-          <li key={move.move.name}>{move.move.name}</li>
-        ))}
-      </ul>
-
-      <h2>Abilities</h2>
-      <ul>
-        {abilitiesDetails.map((ability, index) => (
-          <li key={index}>
-            {ability.name} - {ability.effect_entries[0]?.effect}
-          </li>
-        ))}
-      </ul>
+      <div className={pokemonMovesAbilitiesContainerStyle}>
+        <div className={pokemonMovesStyle}>
+          <p className={detailsPokemonTextStyle}>Moves</p>
+          <ul className={movesListStyle}>
+            {pokemonDetails.moves?.slice(0, 10).map((move) => (
+              <li key={move.move.name} className={movesListItemsStyle}>
+                - {move.move.name.replace(/-/g, ' ')}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={pokemonAbilitiesStyle}>
+          <p className={detailsPokemonTextStyle}>Abilities</p>
+          <ul className={abilitiesListStyle}>
+            {pokemonAbilities.map((ability) => (
+              <li key={ability.name} className={abilitiesListItemsStyle}>
+                <div className={abilityNameButtonContainerStyle}>
+                  <p className={abilityNameStyle}>{ability.name.replace(/-/g, ' ')}</p>
+                  <button className={abilityButtonStyle} onClick={() => handleAbilityClick(ability.name)}>?</button>
+                </div>
+                {selectedAbility === ability.name && (
+                  <p className={abilityDescriptionStyle}>{ability.effect_entries[1]?.effect}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

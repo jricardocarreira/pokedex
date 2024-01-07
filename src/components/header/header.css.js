@@ -11,9 +11,6 @@ export const headerStyle = style ({
     backgroundColor: vars.colors.lightCardsBackground,
 })
 
-export const headingContainerStyle = style ({
-})
-
 export const headingStyle = style ({
     fontSize: vars.fontSize.large,
     fontWeight: 700,
