@@ -44,6 +44,7 @@ export const detailsPokemonTextStyle = style ({
 
 export const pokemonIdStyle = style({
     fontSize: vars.fontSize.medium,
+    textTransform: "none",
     color: vars.colors.gray,
 })
 

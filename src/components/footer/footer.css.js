@@ -10,7 +10,7 @@ export const footerStyle = style ({
     height: vars.space.large,
     padding: `0 ${vars.space.large}`,
     backgroundColor: vars.colors.lightBackground,
-    gap: vars.space.small
+    gap: vars.space.extraSmall
 })
 
 export const socialNavStyle = style ({

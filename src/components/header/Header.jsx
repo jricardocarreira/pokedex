@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { IconContainer } from "../iconContainer/IconContainer"
-import { headerStyle, headingStyle, navStyle } from "./header.css"
+import { headerStyle, headingStyle, themeToggleButton } from "./header.css"
 
 export const Header = () => {
     return (
@@ -9,9 +9,9 @@ export const Header = () => {
                 <h1 className={headingStyle}>POKEDEX</h1>
             </Link>
 
-            <nav className={navStyle}>
+            <div className={themeToggleButton}>
                 <IconContainer src="/src/icons/dark-icon.svg" alt="Set to dark mode icon"/>
-            </nav>
+            </div>
         </header>
     )
 }

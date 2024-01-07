@@ -31,9 +31,15 @@ export const cardImageStyle = style({
 })
 
 export const cardPokemonNameStyle = style({
-    fontSize: vars.fontSize.large,
+    fontSize: vars.fontSize.medium,
     textTransform: "capitalize",
     color: vars.colors.darkCardsBackground,
+})
+
+export const cardPokemonIdStyle = style ({
+    fontSize: vars.fontSize.small,
+    textTransform: "none",
+    color: vars.colors.gray,
 })
 
 export const cardTypeContainerStyle = style({

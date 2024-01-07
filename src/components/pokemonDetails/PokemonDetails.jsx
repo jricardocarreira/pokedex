@@ -65,7 +65,7 @@ export const PokemonDetails = () => {
         <img className={detailsImageStyle} src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
         <div className={pokemonNameTypesContainerStyle}>
           <p className={detailsPokemonTextStyle}>
-            {pokemonDetails.name} <span className={pokemonIdStyle}>{`Nº ${pokemonDetails.id.toString().padStart(4, '0')}`}</span>
+            {pokemonDetails.name} <span className={pokemonIdStyle}>{`nº ${pokemonDetails.id.toString().padStart(4, '0')}`}</span>
           </p>
           <ul className={detailsTypeContainerStyle}>
             {pokemonDetails.types.map((type, index) => (
@@ -94,7 +94,7 @@ export const PokemonDetails = () => {
             {pokemonAbilities.map((ability) => (
               <li key={ability.name} className={abilitiesListItemsStyle}>
                 <div className={abilityNameButtonContainerStyle}>
-                  <p className={abilityNameStyle}>{ability.name.replace(/-/g, ' ')}</p>
+                  <p className={abilityNameStyle}>- {ability.name.replace(/-/g, ' ')}</p>
                   <button className={abilityButtonStyle} onClick={() => handleAbilityClick(ability.name)}>?</button>
                 </div>
                 {selectedAbility === ability.name && (

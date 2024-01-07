@@ -18,9 +18,7 @@ export const headingStyle = style ({
     verticalAlign: "middle"
 })
 
-export const navStyle = style ({
+export const themeToggleButton = style ({
     display: "flex",
-    justifyContent: "space-between",
     alignItems: "center",
-    gap: vars.space.extraSmall
 })
