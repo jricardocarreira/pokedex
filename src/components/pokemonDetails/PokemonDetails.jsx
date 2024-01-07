@@ -49,7 +49,6 @@ export const PokemonDetails = () => {
   }, [id]);
 
   const handleAbilityClick = (abilityName) => {
-    // Toggle the selected ability when clicked
     setSelectedAbility((prevSelectedAbility) =>
       prevSelectedAbility === abilityName ? null : abilityName
     );

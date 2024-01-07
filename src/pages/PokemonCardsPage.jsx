@@ -4,7 +4,7 @@ import { Header } from "../components/header/Header"
 import { PokemonCardGrid } from "../components/pokemonCardGrid/PokemonCardGrid"
 import { PokemonMainSection } from "../components/pokemonMainSection/PokemonMainSection"
 
-const PokemonCardsPage = () => {
+export const PokemonCardsPage = () => {
     return (
         <>
             <Header />
@@ -16,5 +16,3 @@ const PokemonCardsPage = () => {
         </>
     )
 }
-
-export { PokemonCardsPage }

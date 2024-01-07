@@ -14,7 +14,7 @@ export const pokemonDetaisStyle = style ({
 
 export const mainPokemonDetailsContainerStyle = style ({
     display: "flex",
-    justifyContent: "end",
+    justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "column",
     width: "55%",
@@ -23,7 +23,8 @@ export const mainPokemonDetailsContainerStyle = style ({
 })
 
 export const detailsImageStyle = style ({
-    flexGrow: 1
+    flexGrow: 1,
+    width: "55%"
 })
 
 export const pokemonNameTypesContainerStyle = style ({
