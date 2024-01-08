@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../styles/constants.css";
+import { themes, vars } from "../../styles/constants.css";
 
 export const headerStyle = style ({
     display: "flex",
@@ -8,7 +8,7 @@ export const headerStyle = style ({
     width: "100%",
     height: vars.space.mediumLarge,
     padding: `0 ${vars.space.large}`,
-    backgroundColor: vars.colors.lightCardsBackground,
+    backgroundColor: themes.light.background,
 })
 
 export const headingStyle = style ({

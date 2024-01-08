@@ -21,12 +21,13 @@ export const vars = createGlobalTheme("#root", {
         lightBackground: "#fff",
         lightCardsBackground: "#f5f7ff",
         lightHover: "#e5e7ee",
-        gray: "#999",
-        buttonBackground: "#FC800D",
 
         darkBackground: "#222",
         darkCardsBackground: "#333",
         darkHover: "#777",
+
+        gray: "#999",
+        buttonBackground: "#FC800D",
 
         bugType: '#729f3f',
         darkType: '#707070',
@@ -53,6 +54,19 @@ export const vars = createGlobalTheme("#root", {
     shadows: {
         default: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
         hover: "0px 8px 8px 0px rgba(0, 0, 0, 0.25)",
-        click: "0px 1px 1px 0px rgba(0, 0, 0, 0.25)"
+        active: "0px 1px 1px 0px rgba(0, 0, 0, 0.25)"
     }
 })
+
+export const themes = {
+    light: {
+      background: vars.colors.lightBackground,
+      cardsBackground: vars.colors.lightCardsBackground,
+      hover: vars.colors.lightHover,
+    },
+    dark: {
+      background: vars.colors.darkBackground,
+      cardsBackground: vars.colors.darkCardsBackground,
+      hover: vars.colors.darkHover,
+    },
+  };

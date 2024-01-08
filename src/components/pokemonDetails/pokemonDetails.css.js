@@ -3,7 +3,6 @@ import { vars } from "../../styles/constants.css";
 
 export const pokemonDetaisStyle = style ({
     display: "flex",
-    alignItems: "center",
     width: "100%",
     minHeight: "540px",
     paddingBottom: vars.space.mediumLarge,
@@ -19,7 +18,8 @@ export const mainPokemonDetailsContainerStyle = style ({
     flexDirection: "column",
     width: "55%",
     height: "100%",
-    paddingTop: vars.space.medium
+    paddingTop: vars.space.medium,
+    gap: vars.space.extraSmall
 })
 
 export const detailsImageStyle = style ({
