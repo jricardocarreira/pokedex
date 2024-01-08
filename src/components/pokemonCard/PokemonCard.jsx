@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { typeStyle } from '../../styles/typeBackground.css.js';
+import { typeStyle } from '../../styles/type-style.css.js';
 import { pokemonCardStyle, cardTypeContainerStyle, cardTypeStyle, cardImageStyle, cardPokemonNameStyle, cardPokemonIdStyle } from './pokemonCard.css';
 
 export const PokemonCard = ({ id, image, name, types }) => {

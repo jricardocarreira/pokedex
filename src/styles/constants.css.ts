@@ -26,6 +26,7 @@ export const vars = createGlobalTheme("#root", {
 
         darkBackground: "#222",
         darkCardsBackground: "#333",
+        darkHover: "#777",
 
         bugType: '#729f3f',
         darkType: '#707070',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { typeStyle } from '../../styles/typeBackground.css.js';
+import { typeStyle } from '../../styles/type-style.css.js';
 import { fetchPokemonDetails, fetchPokemonAbilities } from '../../services/fetchApi';
 import {
   abilitiesListItemsStyle,

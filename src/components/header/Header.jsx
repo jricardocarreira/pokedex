@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import { IconContainer } from "../iconContainer/IconContainer"
-import { headerStyle, headingStyle, themeToggleButton } from "./header.css"
+import { headerStyle, headingStyle } from "./header.css"
+import { ThemeTogglerButton } from "../themeTogglerButton/ThemeTogglerButton"
 
 export const Header = () => {
     return (
@@ -9,9 +9,7 @@ export const Header = () => {
                 <h1 className={headingStyle}>POKEDEX</h1>
             </Link>
 
-            <div className={themeToggleButton}>
-                <IconContainer src="/src/icons/dark-icon.svg" alt="Set to dark mode icon"/>
-            </div>
+            <ThemeTogglerButton />
         </header>
     )
 }

@@ -17,8 +17,3 @@ export const headingStyle = style ({
     color: vars.colors.darkCardsBackground,
     verticalAlign: "middle"
 })
-
-export const themeToggleButton = style ({
-    display: "flex",
-    alignItems: "center",
-})

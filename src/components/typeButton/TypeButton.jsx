@@ -1,4 +1,4 @@
-import { typeStyle } from "../../styles/typeBackground.css"
+import { typeStyle } from "../../styles/type-style.css"
 import { typeButtonStyle } from "./typeButton.css"
 
 export const TypeButton = ({type}) => {
