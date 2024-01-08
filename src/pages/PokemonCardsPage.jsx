@@ -8,7 +8,6 @@ export const PokemonCardsPage = () => {
     return (
         <>
             <Header />
-            <FilterSection />
             <PokemonMainSection>
                 <PokemonCardGrid />
             </PokemonMainSection>
