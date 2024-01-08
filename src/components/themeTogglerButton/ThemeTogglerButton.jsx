@@ -3,7 +3,7 @@ import { IconContainer } from '../iconContainer/IconContainer';
 import { themeTogglerButtonStyle } from './themeTogglerButton.css';
 import { useTheme } from '../../contexts/themeContext';
 
-export const ThemeTogglerButton = ({ lightIcon, darkIcon }) => {
+export const ThemeTogglerButton = () => {
   const { theme, toggleTheme } = useTheme();
 
   const lightIcon = "/src/icons/light-icon.svg";
