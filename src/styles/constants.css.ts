@@ -60,6 +60,19 @@ export const vars = createGlobalTheme("#root", {
 
 export const themes = {
     light: {
+      background: "#222",
+      cardsBackground: "#222",
+      hover: "#222",
+    },
+    dark: {
+      background: "#bbb",
+      cardsBackground: "#bbb",
+      hover: "#bbb",
+    },
+  };
+
+  export const themes2 = {
+    light: {
       background: vars.colors.lightBackground,
       cardsBackground: vars.colors.lightCardsBackground,
       hover: vars.colors.lightHover,
