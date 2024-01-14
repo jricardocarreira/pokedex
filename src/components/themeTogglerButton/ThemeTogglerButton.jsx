@@ -6,11 +6,11 @@ import { useContext } from 'react';
 
 export const ThemeTogglerButton = () => {
 
-/*   const { theme, updateTheme } = useContext(ThemeContext);
- */
+  const { theme, updateTheme } = useContext(ThemeContext);
+
   const toggleFunction = () => {
-/*     const newTheme = theme === 'dark' ? 'light' : 'dark';
-    updateTheme(newTheme) */
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    updateTheme(newTheme)
   }
 
   const lightIcon = "/src/icons/light-icon.svg";

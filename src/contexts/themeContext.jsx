@@ -12,9 +12,9 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
-      <ThemeProvider theme={themes[theme]} key={theme}>
-        {children}
-      </ThemeProvider>
-    </ThemeContext.Provider>
+{/*       <ThemeProvider theme={themes[theme]} key={theme}>
+ */}        {children}
+{/*       </ThemeProvider>
+ */}    </ThemeContext.Provider>
   );
 };
