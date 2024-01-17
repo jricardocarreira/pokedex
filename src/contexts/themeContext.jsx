@@ -3,7 +3,7 @@ import { themes } from '../styles/constants.css';
 
 export const ThemeContext = createContext({ });
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvedor = ({ children }) => {
   const [theme, setTheme] = useState('light');
 
   const updateTheme = (newTheme) => {

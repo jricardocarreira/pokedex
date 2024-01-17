@@ -18,12 +18,12 @@ export const vars = createGlobalTheme("#root", {
         large: `${6 * baseUnit}px`,
     },
     colors: {
-        lightBackground: "#fff",
-        lightCardsBackground: "#f5f7ff",
-        lightHover: "#e5e7ee",
+        background: "#fff",
+        cards: "#f5f7ff",
+        hover: "#e5e7ee",
 
         darkBackground: "#222",
-        darkCardsBackground: "#333",
+        darkCards: "#333",
         darkHover: "#777",
 
         gray: "#999",
@@ -60,13 +60,13 @@ export const vars = createGlobalTheme("#root", {
 
   export const themes = {
     light: {
-      background: vars.colors.lightBackground,
-      cardsBackground: vars.colors.lightCardsBackground,
-      hover: vars.colors.lightHover,
+      background: vars.colors.background,
+      cardsBackground: vars.colors.cards,
+      hover: vars.colors.hover,
     },
     dark: {
       background: vars.colors.darkBackground,
-      cardsBackground: vars.colors.darkCardsBackground,
+      cardsBackground: vars.colors.darkCards,
       hover: vars.colors.darkHover,
     },
   };

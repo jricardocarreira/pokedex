@@ -14,6 +14,6 @@ export const headerStyle = style ({
 export const headingStyle = style ({
     fontSize: vars.fontSize.large,
     fontWeight: 700,
-    color: vars.colors.darkCardsBackground,
+    color: vars.colors.darkCards,
     verticalAlign: "middle"
 })

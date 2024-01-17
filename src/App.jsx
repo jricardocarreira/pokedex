@@ -1,4 +1,4 @@
-import { ThemeProvider } from "./contexts/themeContext"
+import { ThemeProvedor } from "./contexts/themeContext"
 import { AppRoutes } from "./pages/routes"
 import "./styles/app.css"
 import { themes } from "./styles/constants.css"
@@ -6,9 +6,9 @@ import { themes } from "./styles/constants.css"
 function App() {
 
   return (
-    <ThemeProvider theme={themes}>
+    <ThemeProvedor theme={themes}>
       <AppRoutes />
-    </ThemeProvider>
+    </ThemeProvedor>
   )
 }
 

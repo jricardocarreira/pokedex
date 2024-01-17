@@ -8,15 +8,15 @@ export const typeStyle = style({
     selectors: {
         '.bug&': {
             backgroundColor: vars.colors.bugType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.dark&': {
             backgroundColor: vars.colors.darkType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.dragon&': {
             background: `linear-gradient(180deg, ${vars.colors.dragonType1} 50%, ${vars.colors.dragonType2} 50%)`,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.electric&': {
             backgroundColor: vars.colors.electricType,
@@ -28,11 +28,11 @@ export const typeStyle = style({
         },
         '.fighting&': {
             backgroundColor: vars.colors.fightingType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.fire&': {
             backgroundColor: vars.colors.fireType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.flying&': {
             background: `linear-gradient(180deg, ${vars.colors.flyingType1} 50%, ${vars.colors.flyingType2} 50%)`,
@@ -40,7 +40,7 @@ export const typeStyle = style({
         },
         '.ghost&': {
             backgroundColor: vars.colors.ghostType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.grass&': {
             backgroundColor: vars.colors.grassType,
@@ -60,15 +60,15 @@ export const typeStyle = style({
         },
         '.poison&': {
             backgroundColor: vars.colors.poisonType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.psychic&': {
             backgroundColor: vars.colors.psychicType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.rock&': {
             backgroundColor: vars.colors.rockType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
         '.steel&': {
             backgroundColor: vars.colors.steelType,
@@ -76,7 +76,7 @@ export const typeStyle = style({
         },
         '.water&': {
             backgroundColor: vars.colors.waterType,
-            color: vars.colors.lightBackground
+            color: vars.colors.background
         },
     
     }

@@ -4,7 +4,7 @@ import { vars } from "../../styles/constants.css";
 export const loadMoreButtonStyle = style({
     fontSize: vars.fontSize.large,
     fontWeight: 700,
-    color: vars.colors.lightBackground,
+    color: vars.colors.background,
     backgroundColor: vars.colors.buttonBackground,
     display: "flex",
     justifyContent: "center",

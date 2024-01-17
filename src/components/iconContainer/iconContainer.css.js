@@ -10,6 +10,6 @@ export const iconContainerStyle = style ({
     borderRadius: "50%",
     transition: "0.3s",
     ":hover": {
-        backgroundColor: vars.colors.lightHover
+        backgroundColor: vars.colors.hover
     },
 })

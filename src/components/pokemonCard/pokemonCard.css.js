@@ -10,7 +10,7 @@ export const pokemonCardStyle = style({
     height: "307px",
     gap: vars.space.small,
     paddingBottom: vars.space.medium,
-    backgroundColor: vars.colors.lightCardsBackground,
+    backgroundColor: vars.colors.cards,
     borderRadius: "10px",
     boxShadow: vars.shadows.default,
     transition: "0.3s",
@@ -33,7 +33,7 @@ export const cardImageStyle = style({
 export const cardPokemonNameStyle = style({
     fontSize: vars.fontSize.medium,
     textTransform: "capitalize",
-    color: vars.colors.darkCardsBackground,
+    color: vars.colors.darkCards,
 })
 
 export const cardPokemonIdStyle = style ({
