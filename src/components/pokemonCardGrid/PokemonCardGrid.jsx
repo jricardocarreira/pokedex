@@ -33,8 +33,8 @@ export const PokemonCardGrid = ({ filterTerm }) => {
   };
 
   const filteredPokemonList = pokemonList.filter((pokemon) =>
-    pokemon.name.toLowerCase().includes(filterTerm.toLowerCase()) ||
-    String(pokemon.id) === filterTerm.toLowerCase()
+    pokemon.name.includes(filterTerm) ||
+    String(pokemon.id) === filterTerm
   );
 
   return (
