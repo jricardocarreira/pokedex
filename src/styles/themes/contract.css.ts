@@ -4,5 +4,6 @@ export const themes = createThemeContract({
     background: null,
     cardsBackground: null,
     hover: null,
-    text: null
+    text: null,
+    filter: null
 })

@@ -55,5 +55,8 @@ export const vars = createGlobalTheme("#root", {
     default: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
     hover: "0px 8px 8px 0px rgba(0, 0, 0, 0.3)",
     active: "0px 1px 1px 0px rgba(0, 0, 0, 0.3)"
+  },
+  filters: {
+    invert: "invert(80%)"
   }
 })

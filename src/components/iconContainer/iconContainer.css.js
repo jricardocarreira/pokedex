@@ -15,3 +15,7 @@ export const iconContainerStyle = style ({
         backgroundColor: themes.hover
     },
 })
+
+export const imageFilterStyle = style ({
+    filter: themes.filter
+})
