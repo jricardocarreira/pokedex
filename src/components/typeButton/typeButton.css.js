@@ -8,6 +8,7 @@ export const typeButtonStyle = style ({
     borderRadius: "4px",
     border: "none",
     boxShadow: vars.shadows.default,
+    cursor: "pointer",
     transition: "box-shadow 0.3s, transform 0.3s",
     ":active": {
         transform: "scale(0.98)",

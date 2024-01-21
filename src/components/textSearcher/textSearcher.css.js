@@ -22,7 +22,7 @@ export const textInputStyle = style ({
     textOverflow: "ellipsis",
 
     "::placeholder": {
-        color: "#D5D7DD",
+        color: themes.hover,
     }
 })
 

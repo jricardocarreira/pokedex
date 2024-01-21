@@ -6,7 +6,7 @@ export const Header = ({ onToggleTheme }) => {
     return (
         <header className={headerStyle}>
             <Link to={'/'}>
-                <h1 className={headingStyle}>POKEDEX</h1>
+                <h1 className={headingStyle}>POKÉDEX</h1>
             </Link>
 
             <ThemeTogglerButton onToggleTheme={onToggleTheme}/>

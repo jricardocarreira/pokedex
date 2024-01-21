@@ -3,8 +3,9 @@ import { PokemonCard } from '../pokemonCard/PokemonCard';
 import { PokemonCardGridStyle } from './pokemonCardGrid.css';
 import { fetchPokemonList, fetchPokemonDetails } from '../../services/fetchApi';
 import { LoadMoreButton } from '../loadMoreButton/LoadMoreButton';
+import { LoadingOrNotFoundText } from '../loadingOrNotFoundText/LoadingOrNoFoundText';
 
-export const PokemonCardGrid = () => {
+export const PokemonCardGrid = ({ filterTerm }) => {
   const [pokemonList, setPokemonList] = useState([]);
   const [visiblePokemonCount, setVisiblePokemonCount] = useState(10);
 
@@ -24,27 +25,36 @@ export const PokemonCardGrid = () => {
   }, [visiblePokemonCount]);
 
   if (!pokemonList) {
-    return <p>Loading...</p>;
+    return <LoadingOrNotFoundText>Loading...</LoadingOrNotFoundText>;
   }
 
   const handleLoadMoreClick = () => {
     setVisiblePokemonCount((prevCount) => prevCount + 10);
   };
 
+  const filteredPokemonList = pokemonList.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(filterTerm.toLowerCase()) ||
+    String(pokemon.id) === filterTerm.toLowerCase()
+  );
+
   return (
     <>
-      <ul className={PokemonCardGridStyle}>
-        {pokemonList.map((pokemon) => (
-          <PokemonCard
-            key={pokemon.id}
-            id={pokemon.id}
-            name={pokemon.name}
-            image={pokemon.sprites.front_default}
-            types={pokemon.types.map((type) => type.type.name)}
-          />
-        ))}
-      </ul>
+      {filteredPokemonList.length > 0 ? (
+        <ul className={PokemonCardGridStyle}>
+          {filteredPokemonList.map((pokemon) => (
+            <PokemonCard
+              key={pokemon.id}
+              id={pokemon.id}
+              name={pokemon.name}
+              image={pokemon.sprites.front_default}
+              types={pokemon.types.map((type) => type.type.name)}
+            />
+          ))}
+        </ul>
+      ) : (
+        <LoadingOrNotFoundText>Search for another name or load more Pokémon by clicking below</LoadingOrNotFoundText>
+      )}
       <LoadMoreButton onClick={handleLoadMoreClick} />
     </>
   );
-};
+}

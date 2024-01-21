@@ -23,6 +23,7 @@ import {
   pokemonMovesStyle,
   pokemonNameTypesContainerStyle
 } from './pokemonDetails.css';
+import { LoadingOrNotFoundText } from '../loadingOrNotFoundText/LoadingOrNoFoundText.jsx';
 
 export const PokemonDetails = () => {
   const { id } = useParams();
@@ -55,7 +56,7 @@ export const PokemonDetails = () => {
   };
 
   if (!pokemonDetails) {
-    return <p>Loading...</p>;
+    return <LoadingOrNotFoundText>Loading...</LoadingOrNotFoundText>;
   }
 
   return (
