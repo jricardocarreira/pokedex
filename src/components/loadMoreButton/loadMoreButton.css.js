@@ -14,7 +14,8 @@ export const loadMoreButtonStyle = style({
     borderRadius: "10px",
     border: "none",
     boxShadow: vars.shadows.default,
-    transition: "0.2s",
+    cursor: "pointer",
+    transition: "box-shadow 0.3s, transform 0.3s",
     ":active": {
         transform: "scale(0.98)",
         boxShadow: vars.shadows.active,

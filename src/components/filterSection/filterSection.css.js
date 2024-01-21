@@ -6,9 +6,9 @@ export const filterSectionStyle = style ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: themes.cardsBackground,
+    backgroundColor: themes.background,
     width: "100%",
-    padding: `${vars.space.medium} ${vars.space.large}`,
+    padding: `${vars.space.medium} ${vars.space.large} 0`,
     gap: vars.space.medium,
     flexWrap: "wrap"
 })

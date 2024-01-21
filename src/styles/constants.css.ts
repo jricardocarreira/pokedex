@@ -24,9 +24,9 @@ export const vars = createGlobalTheme("#root", {
 
     darkBackground: "#222",
     darkCards: "#333",
-    darkHover: "#777",
+    darkHover: "#444",
 
-    gray: "#999",
+    gray: "#888",
     buttonBackground: "#FC800D",
 
     bugType: '#729f3f',
@@ -52,8 +52,8 @@ export const vars = createGlobalTheme("#root", {
     waterType: '#4592c4',
   },
   shadows: {
-    default: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
-    hover: "0px 8px 8px 0px rgba(0, 0, 0, 0.25)",
-    active: "0px 1px 1px 0px rgba(0, 0, 0, 0.25)"
+    default: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
+    hover: "0px 8px 8px 0px rgba(0, 0, 0, 0.3)",
+    active: "0px 1px 1px 0px rgba(0, 0, 0, 0.3)"
   }
 })

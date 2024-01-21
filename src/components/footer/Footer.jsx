@@ -1,5 +1,5 @@
 import { IconContainer } from "../iconContainer/IconContainer"
-import { footerStyle, madeByCreatorStyle, socialNavStyle } from "./footer.css"
+import { bugAnchorStyle, footerStyle, madeByCreatorStyle, socialNavStyle } from "./footer.css"
 
 export const Footer = () => {
     return (
@@ -16,7 +16,9 @@ export const Footer = () => {
                 </a>
             </nav>
             <div>
-                <p className={madeByCreatorStyle}>Design and development by José Ricardo Carreira 'Bug'</p>
+                <p className={madeByCreatorStyle}>Design and development by José Ricardo Carreira
+                    <a href="https://www.instagram.com/bug063/" target="_blank" className={bugAnchorStyle}> 'Bug'</a>
+                </p>
             </div>
         </footer>
     )

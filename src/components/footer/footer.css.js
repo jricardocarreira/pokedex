@@ -1,7 +1,8 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
+import { themes } from "../../styles/themes/contract.css";
 
-export const footerStyle = style ({
+export const footerStyle = style({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -9,16 +10,21 @@ export const footerStyle = style ({
     width: "100%",
     height: vars.space.large,
     padding: `0 ${vars.space.large}`,
-    backgroundColor: vars.colors.background,
+    backgroundColor: themes.cardsBackground,
     gap: vars.space.extraSmall
 })
 
-export const socialNavStyle = style ({
+export const socialNavStyle = style({
     display: "flex",
     gap: vars.space.extraSmall
 })
 
-export const madeByCreatorStyle = style ({
+export const madeByCreatorStyle = style({
     fontSize: vars.fontSize.small,
-    color: vars.colors.darkCards,
+    color: themes.text,
+})
+
+export const bugAnchorStyle = style({
+    color: themes.text,
+    cursor: "help",
 })

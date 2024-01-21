@@ -1,6 +1,6 @@
 import { createTheme } from "@vanilla-extract/css";
-import { themes } from "./contract.css";
 import { vars } from "../constants.css";
+import { themes } from "./contract.css";
 
 export const darkTheme = createTheme(themes, {
     background: vars.colors.darkBackground,

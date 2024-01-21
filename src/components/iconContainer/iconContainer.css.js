@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
+import { themes } from "../../styles/themes/contract.css";
 
 export const iconContainerStyle = style ({
     display: "flex",
@@ -9,7 +10,8 @@ export const iconContainerStyle = style ({
     height: vars.space.medium,
     borderRadius: "50%",
     transition: "0.3s",
+    cursor: "pointer",
     ":hover": {
-        backgroundColor: vars.colors.hover
+        backgroundColor: themes.hover
     },
 })

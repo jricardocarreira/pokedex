@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
+import { themes } from "../../styles/themes/contract.css";
 
 export const pokemonCardStyle = style({
     display: "flex",
@@ -10,10 +11,11 @@ export const pokemonCardStyle = style({
     height: "307px",
     gap: vars.space.small,
     paddingBottom: vars.space.medium,
-    backgroundColor: vars.colors.cards,
+    backgroundColor: themes.cardsBackground,
     borderRadius: "10px",
     boxShadow: vars.shadows.default,
-    transition: "0.3s",
+    transition: "box-shadow 0.3s, transform 0.3s",
+
     ":hover": {
         transform: "scale(1.05)",
         boxShadow: vars.shadows.hover,
@@ -33,7 +35,7 @@ export const cardImageStyle = style({
 export const cardPokemonNameStyle = style({
     fontSize: vars.fontSize.medium,
     textTransform: "capitalize",
-    color: vars.colors.darkCards,
+    color: themes.text,
 })
 
 export const cardPokemonIdStyle = style ({

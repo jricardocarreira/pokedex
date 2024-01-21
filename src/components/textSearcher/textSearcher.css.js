@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
+import { themes } from "../../styles/themes/contract.css";
 
 export const textSearcherStyle = style ({
     display: "flex",
@@ -10,8 +11,8 @@ export const textSearcherStyle = style ({
 export const textInputStyle = style ({
     flexGrow: 1,
     fontSize: vars.fontSize.medium,
-    color: vars.colors.darkCards,
-    background: vars.colors.cards,
+    color: themes.text,
+    background: themes.cardsBackground,
     height: "48px",
     padding: `0 ${vars.space.small}`,
     borderRadius: "10px",
@@ -34,8 +35,10 @@ export const searchButtonStyle = style ({
     height: "48px",
     borderRadius: "10px",
     border: "none",
+    cursor: "pointer",
+
     boxShadow: vars.shadows.default,
-    transition: "0.2s",
+    transition: "box-shadow 0.3s, transform 0.3s",
     ":active": {
         transform: "scale(0.98)",
         boxShadow: vars.shadows.active,
