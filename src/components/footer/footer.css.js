@@ -9,7 +9,7 @@ export const footerStyle = style ({
     width: "100%",
     height: vars.space.large,
     padding: `0 ${vars.space.large}`,
-    backgroundColor: vars.colors.lightBackground,
+    backgroundColor: vars.colors.background,
     gap: vars.space.extraSmall
 })
 
@@ -20,5 +20,5 @@ export const socialNavStyle = style ({
 
 export const madeByCreatorStyle = style ({
     fontSize: vars.fontSize.small,
-    color: vars.colors.darkCardsBackground,
+    color: vars.colors.darkCards,
 })

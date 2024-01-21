@@ -6,7 +6,7 @@ export const pokemonDetaisStyle = style ({
     width: "100%",
     minHeight: "540px",
     paddingBottom: vars.space.mediumLarge,
-    backgroundColor: vars.colors.lightCardsBackground,
+    backgroundColor: vars.colors.cards,
     borderRadius: "10px",
     boxShadow: vars.shadows.default,
 })
@@ -39,7 +39,7 @@ export const pokemonNameTypesContainerStyle = style ({
 export const detailsPokemonTextStyle = style ({
     fontSize: vars.fontSize.large,
     textTransform: "capitalize",
-    color: vars.colors.darkCardsBackground,
+    color: vars.colors.darkCards,
 })
 
 export const pokemonIdStyle = style({
@@ -90,7 +90,7 @@ export const movesListStyle = style ({
 export const movesListItemsStyle = style ({
     fontSize: vars.fontSize.medium,
     textTransform: "capitalize",
-    color: vars.colors.darkCardsBackground,
+    color: vars.colors.darkCards,
     width: "170px",
     flexGrow: 1
 })
@@ -123,15 +123,15 @@ export const abilityNameButtonContainerStyle = style ({
 export const abilityNameStyle = style ({
     fontSize: vars.fontSize.medium,
     textTransform: "capitalize",
-    color: vars.colors.darkCardsBackground,
+    color: vars.colors.darkCards,
 })
 
 export const abilityButtonStyle = style ({
     width: vars.space.small,
     height: vars.space.small,
     fontSize: vars.fontSize.extraSmall,
-    backgroundColor: vars.colors.lightHover,
-    color: vars.colors.darkCardsBackground,
+    backgroundColor: vars.colors.hover,
+    color: vars.colors.darkCards,
     border: "none",
     borderRadius: "50%"
 })
@@ -139,6 +139,6 @@ export const abilityButtonStyle = style ({
 export const abilityDescriptionStyle = style ({
     fontSize: vars.fontSize.small,
     textTransform: "none",
-    color: vars.colors.darkCardsBackground,
+    color: vars.colors.darkCards,
 })
 

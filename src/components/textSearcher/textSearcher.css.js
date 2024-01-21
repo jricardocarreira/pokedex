@@ -10,8 +10,8 @@ export const textSearcherStyle = style ({
 export const textInputStyle = style ({
     flexGrow: 1,
     fontSize: vars.fontSize.medium,
-    color: vars.colors.darkCardsBackground,
-    background: vars.colors.lightCardsBackground,
+    color: vars.colors.darkCards,
+    background: vars.colors.cards,
     height: "48px",
     padding: `0 ${vars.space.small}`,
     borderRadius: "10px",
