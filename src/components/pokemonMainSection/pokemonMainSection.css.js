@@ -6,6 +6,7 @@ export const pokemonMainSectionStyle = style ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    flexGrow: 1,
     width: "100vw",
     padding: `${vars.space.medium} ${vars.space.large}`,
     gap: vars.space.medium,
