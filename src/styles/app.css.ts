@@ -1,5 +1,4 @@
 import { globalStyle } from '@vanilla-extract/css';
-import { themes } from './themes/contract.css';
 
 globalStyle('*', {
   padding: 0,
