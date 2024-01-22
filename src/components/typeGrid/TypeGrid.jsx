@@ -1,28 +1,10 @@
 import { TypeButton } from "../typeButton/TypeButton"
 import { typeGridStyle } from "./typeGrid.css"
 
-export const TypeGrid = () => {
+export const TypeGrid = ({ onTypeClick }) => {
     return (
         <div className={typeGridStyle}>
-            <TypeButton type="bug" />
-            <TypeButton type="dark" />
-            <TypeButton type="dragon" />
-            <TypeButton type="electric" />
-            <TypeButton type="fairy" />
-            <TypeButton type="fighting" />
-            <TypeButton type="fire" />
-            <TypeButton type="flying" />
-            <TypeButton type="ghost" />
-            <TypeButton type="grass" />
-            <TypeButton type="ground" />
-            <TypeButton type="ice" />
-            <TypeButton type="normal" />
-            <TypeButton type="poison" />
-            <TypeButton type="psychic" />
-            <TypeButton type="rock" />
-            <TypeButton type="steel" />
-            <TypeButton type="water" />
-{/*             <TypeButton type="bug" onClick={() => onTypeClick('bug')} />
+            <TypeButton type="bug" onClick={() => onTypeClick('bug')} />
             <TypeButton type="dark" onClick={() => onTypeClick('dark')} />
             <TypeButton type="dragon" onClick={() => onTypeClick('dragon')} />
             <TypeButton type="electric" onClick={() => onTypeClick('eletric')} />
@@ -39,7 +21,7 @@ export const TypeGrid = () => {
             <TypeButton type="psychic" onClick={() => onTypeClick('psychic')} />
             <TypeButton type="rock" onClick={() => onTypeClick('rock')} />
             <TypeButton type="steel" onClick={() => onTypeClick('steel')} />
-            <TypeButton type="water" onClick={() => onTypeClick('water')} /> */}
+            <TypeButton type="water" onClick={() => onTypeClick('water')} />
         </div>
     )
 }

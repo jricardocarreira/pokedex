@@ -5,7 +5,7 @@ import { fetchPokemonList, fetchPokemonDetails } from '../../services/fetchApi';
 import { LoadMoreButton } from '../loadMoreButton/LoadMoreButton';
 import { LoadingOrNotFoundText } from '../loadingOrNotFoundText/LoadingOrNoFoundText';
 
-export const PokemonCardGrid = ({ filterTerm }) => {
+export const PokemonCardGrid = ({ filterResults, selectedType }) => {
   const [pokemonList, setPokemonList] = useState([]);
   const [visiblePokemonCount, setVisiblePokemonCount] = useState(10);
 
@@ -33,8 +33,9 @@ export const PokemonCardGrid = ({ filterTerm }) => {
   };
 
   const filteredPokemonList = pokemonList.filter((pokemon) =>
-    pokemon.name.includes(filterTerm) ||
-    String(pokemon.id) === filterTerm
+    (pokemon.name.includes(filterResults) || String(pokemon.id) === filterResults) &&
+    // Verifica se pelo menos um dos tipos do Pokémon está na lista de tipos selecionados
+    (!selectedType.length || pokemon.types.some((type) => selectedType.includes(type.type.name)))
   );
 
   return (

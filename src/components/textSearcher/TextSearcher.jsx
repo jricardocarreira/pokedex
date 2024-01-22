@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { searchButtonStyle, textInputStyle, textSearcherStyle } from "./textSearcher.css";
 
 export const TextSearcher = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setsearchResults] = useState('');
 
   const handleInputChange = (e) => {
-    setSearchTerm(e.target.value);
+    setsearchResults(e.target.value);
   };
 
   const handleSearch = () => {
-    onSearch(searchTerm);
+    onSearch(searchResults);
   };
 
   const handleKeyDown = (e) => {
@@ -23,7 +23,7 @@ export const TextSearcher = ({ onSearch }) => {
       <input
         placeholder="Search name or id number..."
         className={textInputStyle}
-        value={searchTerm}
+        value={searchResults}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
       />

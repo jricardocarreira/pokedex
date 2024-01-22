@@ -15,3 +15,8 @@ export const typeButtonStyle = style ({
         boxShadow: vars.shadows.active,
     },
 })
+
+export const selectedTypeStyle = style ({
+    transform: "scale(0.98)",
+    boxShadow: vars.shadows.active
+})
