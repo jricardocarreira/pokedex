@@ -2,12 +2,12 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/constants.css";
 import { themes } from "../../styles/themes/contract.css";
 
-export const pokemonMainSectionStyle = style ({
+export const SubsequentsPokemonStyle = style ({
     display: "flex",
-    flexDirection: "column",
+    justifyContent: "space-between",
     alignItems: "center",
     width: "100vw",
-    padding: `${vars.space.medium} ${vars.space.large}`,
+    padding: `0 ${vars.space.large} ${vars.space.medium}`,
     gap: vars.space.medium,
     backgroundColor: themes.background
 })
