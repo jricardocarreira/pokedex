@@ -7,7 +7,7 @@ export const TypeGrid = ({ onTypeClick }) => {
             <TypeButton type="bug" onClick={() => onTypeClick('bug')} />
             <TypeButton type="dark" onClick={() => onTypeClick('dark')} />
             <TypeButton type="dragon" onClick={() => onTypeClick('dragon')} />
-            <TypeButton type="electric" onClick={() => onTypeClick('eletric')} />
+            <TypeButton type="electric" onClick={() => onTypeClick('electric')} />
             <TypeButton type="fairy" onClick={() => onTypeClick('fairy')} />
             <TypeButton type="fighting" onClick={() => onTypeClick('fighting')} />
             <TypeButton type="fire" onClick={() => onTypeClick('fire')} />

@@ -12,11 +12,8 @@ export const PokemonCardsPage = () => {
     };
   
     const handleTypeClick = (type) => {
-      // Verifica se o tipo já está selecionado
-      const isTypeSelected = selectedType.includes(type);
-
-      // Se o tipo já está selecionado, remove-o, senão, adiciona-o à lista de tipos selecionados
-      const updatedTypes = isTypeSelected
+      const updatedTypes = selectedType.includes(type)
+      
         ? selectedType.filter((selectedType) => selectedType !== type)
         : [...selectedType, type];
 

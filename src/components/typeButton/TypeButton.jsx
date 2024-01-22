@@ -14,7 +14,8 @@ export const TypeButton = ({ type, onClick }) => {
       <button
         className={`${typeButtonStyle} ${typeStyle} ${type} ${isSelected ? selectedTypeStyle : ''}`}
         onClick={handleClick}
-      >{type}
+      >
+        {type}
       </button>
     )
   }

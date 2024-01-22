@@ -34,7 +34,6 @@ export const PokemonCardGrid = ({ filterResults, selectedType }) => {
 
   const filteredPokemonList = pokemonList.filter((pokemon) =>
     (pokemon.name.includes(filterResults) || String(pokemon.id) === filterResults) &&
-    // Verifica se pelo menos um dos tipos do Pokémon está na lista de tipos selecionados
     (!selectedType.length || pokemon.types.some((type) => selectedType.includes(type.type.name)))
   );
 
