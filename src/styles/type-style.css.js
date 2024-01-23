@@ -8,14 +8,14 @@ export const typeStyle = style({
     selectors: {
         '.bug&': {
             backgroundColor: vars.colors.bugType,
-            color: vars.colors.background
+            color: vars.colors.darkBackground
         },
         '.dark&': {
             backgroundColor: vars.colors.darkType,
             color: vars.colors.background
         },
         '.dragon&': {
-            background: `linear-gradient(180deg, ${vars.colors.dragonType1} 50%, ${vars.colors.dragonType2} 50%)`,
+            background: vars.colors.dragonType,
             color: vars.colors.background
         },
         '.electric&': {
@@ -32,10 +32,10 @@ export const typeStyle = style({
         },
         '.fire&': {
             backgroundColor: vars.colors.fireType,
-            color: vars.colors.background
+            color: vars.colors.darkBackground
         },
         '.flying&': {
-            background: `linear-gradient(180deg, ${vars.colors.flyingType1} 50%, ${vars.colors.flyingType2} 50%)`,
+            background: vars.colors.flyingType,
             color: vars.colors.darkBackground
         },
         '.ghost&': {
@@ -47,7 +47,7 @@ export const typeStyle = style({
             color: vars.colors.darkBackground
         },
         '.ground&': {
-            background: `linear-gradient(180deg, ${vars.colors.groundType1} 50%, ${vars.colors.groundType2} 50%)`,
+            background: vars.colors.groundType,
             color: vars.colors.darkBackground
         },
         '.ice&': {
@@ -60,15 +60,15 @@ export const typeStyle = style({
         },
         '.poison&': {
             backgroundColor: vars.colors.poisonType,
-            color: vars.colors.background
+            color: vars.colors.darkBackground
         },
         '.psychic&': {
             backgroundColor: vars.colors.psychicType,
-            color: vars.colors.background
+            color: vars.colors.darkBackground
         },
         '.rock&': {
             backgroundColor: vars.colors.rockType,
-            color: vars.colors.background
+            color: vars.colors.darkBackground
         },
         '.steel&': {
             backgroundColor: vars.colors.steelType,
@@ -76,7 +76,7 @@ export const typeStyle = style({
         },
         '.water&': {
             backgroundColor: vars.colors.waterType,
-            color: vars.colors.background
+            color: vars.colors.darkBackground
         },
     
     }
