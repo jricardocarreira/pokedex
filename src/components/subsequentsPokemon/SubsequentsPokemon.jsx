@@ -4,8 +4,14 @@ import { subsequentsPokemonLinksStyle, subsequentsPokemonStyle } from "./subsequ
 export const SubsequentsPokemon = ({ id }) => {
     return (
         <nav className={subsequentsPokemonStyle}>
-            {id > 1 && <Link to={`/pokemon/${id - 1}`} className={subsequentsPokemonLinksStyle} >Previous Pokemon</Link>}
-            <Link to={`/pokemon/${+id + 1}`} className={subsequentsPokemonLinksStyle} >Next Pokemon</Link>
+            <Link to={`/pokemon/${+id + 1}`} className={subsequentsPokemonLinksStyle} >
+                <p>Next Pokemon</p>
+                <img src="/src/icons/arrow.svg" />
+            </Link>
+            {id > 1 && <Link to={`/pokemon/${id - 1}`} className={subsequentsPokemonLinksStyle} >
+                <img src="/src/icons/arrow.svg" />
+                <p>Previous Pokemon</p>
+            </Link>}
         </nav>
     )
 }

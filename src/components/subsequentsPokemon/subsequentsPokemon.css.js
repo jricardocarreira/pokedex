@@ -6,6 +6,7 @@ export const subsequentsPokemonStyle = style ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    flexDirection: "row-reverse",
     backgroundColor: themes.background,
     width: "100%",
     gap: vars.space.medium,
@@ -20,6 +21,7 @@ export const subsequentsPokemonLinksStyle = style ({
     justifyContent: "center",
     alignItems: "center",
     padding: `${vars.space.extraSmall} ${vars.space.medium}`,
+    gap: vars.space.extraSmall,
     borderRadius: "5px",
     boxShadow: vars.shadows.default,
     cursor: "pointer",
@@ -28,4 +30,7 @@ export const subsequentsPokemonLinksStyle = style ({
         transform: "scale(0.98)",
         boxShadow: vars.shadows.active,
     },
+    "p + img": {
+        transform: "rotate(180deg)",
+    }
 })
