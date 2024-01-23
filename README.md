@@ -46,7 +46,7 @@ Theme Toggler
 
 ## Link
 
-Project on GitHub Pages: [Pokedex](jricardocarreira.github.io/pokedex/)
+Project on GitHub Pages: [Pokédex](jricardocarreira.github.io/pokedex/)
 
 ## How to Run the Project
 
