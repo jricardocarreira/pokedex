@@ -22,9 +22,9 @@ export const vars = createGlobalTheme("#root", {
     cards: "#f5f7ff",
     hover: "#e5e7ee",
 
-    darkBackground: "#222",
-    darkCards: "#333",
-    darkHover: "#444",
+    darkBackground: "#202128",
+    darkCards: "#333440",
+    darkHover: "#444550",
 
     gray: "#888",
     buttonBackground: "#FC800D",
