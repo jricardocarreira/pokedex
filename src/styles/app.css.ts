@@ -1,4 +1,5 @@
 import { globalStyle } from '@vanilla-extract/css';
+import { themes } from './themes/contract.css';
 
 globalStyle('*', {
   padding: 0,
@@ -13,4 +14,8 @@ globalStyle('#app', {
   display: "flex",
   flexDirection: "column",
   minHeight: "100vh"
+})
+
+globalStyle('body', {
+  backgroundColor: themes.background
 })

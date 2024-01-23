@@ -118,7 +118,8 @@ export const abilitiesListItemsStyle = style ({
 export const abilityNameButtonContainerStyle = style ({
     display: "flex",
     alignItems: "center",
-    gap: vars.space.extraSmall
+    gap: vars.space.extraSmall,
+    cursor: "pointer"
 })
 
 export const abilityNameStyle = style ({
@@ -134,7 +135,8 @@ export const abilityButtonStyle = style ({
     backgroundColor: themes.hover,
     color: themes.text,
     border: "none",
-    borderRadius: "50%"
+    borderRadius: "50%",
+    cursor: "pointer"
 })
 
 export const abilityDescriptionStyle = style ({

@@ -22,8 +22,8 @@ export const PokemonCardsPage = () => {
 
   return (
     <>
-      <FilterSection onSearch={handleSearch} onTypeClick={handleTypeClick} />
       <PokemonMainSection>
+        <FilterSection onSearch={handleSearch} onTypeClick={handleTypeClick} />
         <PokemonCardGrid filterResults={searchResults} selectedType={selectedType} />
       </PokemonMainSection>
     </>

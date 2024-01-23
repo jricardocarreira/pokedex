@@ -94,9 +94,9 @@ export const PokemonDetails = () => {
           <ul className={abilitiesListStyle}>
             {pokemonAbilities.map((ability) => (
               <li key={ability.name} className={abilitiesListItemsStyle}>
-                <div className={abilityNameButtonContainerStyle}>
+                <div className={abilityNameButtonContainerStyle} onClick={() => handleAbilityClick(ability.name)}>
                   <p className={abilityNameStyle}>- {ability.name.replace(/-/g, ' ')}</p>
-                  <button className={abilityButtonStyle} onClick={() => handleAbilityClick(ability.name)}>?</button>
+                  <button className={abilityButtonStyle} >?</button>
                 </div>
                 {selectedAbility === ability.name && (
                   <p className={abilityDescriptionStyle}>{ability.effect_entries[1]?.effect}</p>

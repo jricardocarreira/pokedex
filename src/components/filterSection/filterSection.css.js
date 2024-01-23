@@ -8,7 +8,6 @@ export const filterSectionStyle = style ({
     alignItems: "center",
     backgroundColor: themes.background,
     width: "100%",
-    padding: `${vars.space.medium} ${vars.space.large} 0`,
     gap: vars.space.medium,
     flexWrap: "wrap"
 })
