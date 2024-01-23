@@ -1,42 +1,42 @@
 # Pokédex
 
-## Descrição
+## Description
 
-A Pokédex é uma Single Page Application (SPA) desenvolvida em React.js que permite aos usuários explorar informações detalhadas sobre cada Pokémon, assim como nos jogos e anime Pokémon.
+Pokédex is a Single Page Application (SPA) developed in React.js that allows users to explore detailed information about each Pokémon, just like in Pokémon games and anime.
 
-## Funcionalidades
+## Features
 
-- Alternador entre tema Claro e Escuro
-- Pesquisa de Pokémon por nome e id
-- Filtragem de Pokémon por tipo
-- Visualização de detalhes do Pokémon, incluindo movimentos e habilidades
+- Theme toggler between Light and Dark themes
+- Pokémon search by name and ID
+- Pokémon filtering by type
+- Viewing details of each Pokémon, including moves and abilities
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- [React.js](https://react.dev/): Escolhido pela eficiência na criação de SPAs
+- [React.js](https://react.dev/): Chosen for its efficiency in creating SPAs
 - [PokeAPI](https://pokeapi.co/api/v2/)
-- [Vanilla Extract](https://vanilla-extract.style/): Adotado para estilização dos componentes e criar o Theme Toggler.
-- [React Router](https://reactrouter.com/en/main): Responsável po fazer a navegação entre as páginas da aplicação.
+- [Vanilla Extract](https://vanilla-extract.style/): Adopted for styling components and creating the Theme Toggler.
+- [React Router](https://reactrouter.com/en/main): Used for navigation between application pages.
 
-## Decisões Adotadas
+## Decisions Made
 
-- **Prototipo no Figma**: Criei o protótipo da UI no Figma, o que deixou meu fluxo de trabalhando muito mais contínuo, já que sabia como seria o design da minha aplicação.
+- **Figma Prototype**: I created the UI prototype in Figma, which made my workflow smoother as I knew how the design of my application would look.
 
-- **PokeAPI**: Essa API é projetada de maneira simples e fácil de usar, com uma ampla variedade de dados e imagens de cada Pokémon. Adoro como as artes nos jogos eram feitas em pixel, então decidi usar essa estética, apesar da facilidade de alternar por qualquer outra.
+- **PokeAPI**: This API is designed in a simple and easy-to-use way, with a wide variety of data and images for each Pokémon. I love how the game arts were pixelated, so I decided to use this aesthetic despite the ease of switching to any other.
 
-- **Theme Toggler**: Criei os temas para melhorar experiência do usuário, podendo alterar entre tema Claro e Escuro.
+- **Theme Toggler**: I created themes to improve the user experience, allowing them to switch between Light and Dark themes.
 
-- **Vanilla Extract**: Usei essa biblioteca para estilizar os componentes pela praticidade e ser um Zero-runtime Stylesheets, tendo uma melhor performace que outras bibliotecas.
+- **Vanilla Extract**: I used this library to style the components for its practicality and being a Zero-runtime Stylesheets, providing better performance than other libraries.
 
-- **React Router**: Usei essa biblioteca para facilitar a navegação entre diferentes páginas da aplicação.
+- **React Router**: I used this library to facilitate navigation between different pages of the application.
 
-## Screenshoots
+## Screenshots
 
-Página principal
+Main Page
 
 <img src='./public/pokedex-loadmore-filter.gif'><br>
 
-Página do pokémon
+Pokémon Details Page
 
 <img src='./public/pokemon-details.gif'><br>
 
@@ -44,23 +44,23 @@ Theme Toggler
 
 <img src='./public/pokedex-theme-toggler.gif'>
 
-## Como Rodar o Projeto
+## How to Run the Project
 
-1. Clone o repositório para o seu computador:
+1. Clone the repository to your computer:
    ```bash
    git clone https://github.com/jricardocarreira/pokedex
-2. Navegue até o diretório do projeto clonado:
+2. Navigate to the cloned project directory:
    ```bash
    cd pokedex
-3. Instale as dependências:
+3. Install dependencies:
    ```bash
    npm install
-4. Inicie a aplicação:
+4. Start the application:
    ```bash
    npm start
-5. Abra seu navegador e acesse http://localhost:3000 para visualizar a Pokedex!
+5. Open your browser and go to http://localhost:3000 to view the Pokédex!
 
-## Contato
+## Contact
 
 <a href="https://instagram.com/jricardocarreira" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
 <a href = "mailto:jricardocarreira@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
