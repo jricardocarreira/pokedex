@@ -22,11 +22,11 @@ Pokédex is a Single Page Application (SPA) developed in React.js that allows us
 
 - **Figma Prototype**: I created the UI prototype in Figma, which made my workflow smoother as I knew how the design of my application would look.
 
-- **PokeAPI**: This API is designed in a simple and easy-to-use way, with a wide variety of data and images for each Pokémon. I love how the game arts were pixelated, so I decided to use this aesthetic despite the ease of switching to any other.
-
-- **Theme Toggler**: I created themes to improve the user experience, allowing them to switch between Light and Dark themes.
+- **PokéAPI**: This API is designed in a simple and easy-to-use way, with a wide variety of data and images for each Pokémon. I love how the game arts were pixelated, so I decided to use this aesthetic despite the ease of switching to any other.
 
 - **Vanilla Extract**: I used this library to style the components for its practicality and being a Zero-runtime Stylesheets, providing better performance than other libraries.
+
+- **Theme Toggler**: I created themes to improve the user experience, allowing them to switch between Light and Dark themes.
 
 - **React Router**: I used this library to facilitate navigation between different pages of the application.
 
@@ -66,3 +66,13 @@ Theme Toggler
 <a href = "mailto:jricardocarreira@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/jricardocarreira" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
  
+ ## Additional Resources
+  ### Figma
+- [Figma Pokédex Prototype]()
+ ### Vanilla Extract
+- [Vanilla Extract documentation](https://vanilla-extract.style/documentation/getting-started)
+- [Using Vanilla Extract with React](https://youtu.be/eKfPRK_rOfc?si=MENdg94FTfrSSZBC)
+- [Theming a React Application with Vanilla Extract](https://formidable.com/blog/2021/vanilla-extract/)
+### PokéAPI
+- [PokéAPI Documentation](https://pokeapi.co/docs/v2)
+- [PokéAPI Sprites](https://github.com/PokeAPI/sprites)
