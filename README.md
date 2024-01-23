@@ -44,6 +44,10 @@ Theme Toggler
 
 <img src='./public/pokedex-theme-toggler.gif'>
 
+## Link
+
+Project on GitHub Pages: [Pokédex](jricardocarreira.github.io/pokedex/)
+
 ## How to Run the Project
 
 1. Clone the repository to your computer:
