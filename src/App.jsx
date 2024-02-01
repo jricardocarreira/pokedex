@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AppRoutes } from "./pages/routes"
+import { AppRoutes } from "./routes"
 import "./styles/app.css"
 import { darkTheme } from "./styles/themes/darkTheme.css";
 import { lightTheme } from "./styles/themes/lightTheme.css";

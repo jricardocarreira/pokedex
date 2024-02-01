@@ -34,15 +34,15 @@ Pokédex is a Single Page Application (SPA) developed in React.js that allows us
 
 Main Page
 
-<img src='./public/pokedex-loadmore-filter.gif'><br>
+<img src='./src/assets/pokedex-loadmore-filter.gif'><br>
 
 Pokémon Details Page
 
-<img src='./public/pokemon-details.gif'><br>
+<img src='./src/assets/pokemon-details.gif'><br>
 
 Theme Toggler
 
-<img src='./public/pokedex-theme-toggler.gif'>
+<img src='./src/assets/pokedex-theme-toggler.gif'>
 
 ## Link
 
@@ -79,4 +79,4 @@ Project on GitHub Pages: [Pokédex](jricardocarreira.github.io/pokedex/)
 - [Theming a React Application with Vanilla Extract](https://formidable.com/blog/2021/vanilla-extract/)
 ### PokéAPI
 - [PokéAPI Documentation](https://pokeapi.co/docs/v2)
-- [PokéAPI Sprites](https://github.com/PokeAPI/sprites)
+- [PokéAPI Sprites](https://github.com/PokeAPI/spsrc/assets

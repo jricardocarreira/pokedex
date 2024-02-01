@@ -4,8 +4,8 @@ import { themeTogglerButtonStyle } from './themeTogglerButton.css';
 
 export const ThemeTogglerButton = ({ onToggleTheme }) => {
 
-  const lightIcon = "/src/icons/light-icon.svg";
-  const darkIcon = "/src/icons/dark-icon.svg";
+  const lightIcon = "/src/assets/light-icon.svg";
+  const darkIcon = "/src/assets/dark-icon.svg";
 
   const [iconSrc, setIconSrc] = useState(lightIcon);
 
