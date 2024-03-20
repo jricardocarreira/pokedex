@@ -9,18 +9,17 @@ export const textSearcherStyle = style ({
 })
 
 export const textInputStyle = style ({
-    flexGrow: 1,
     fontSize: vars.fontSize.medium,
     color: themes.text,
     background: themes.cardsBackground,
     height: "48px",
+    width: "100%",
     padding: `0 ${vars.space.small}`,
     borderRadius: "10px",
     border: "none",
     whiteSpace: "nowrap",
     overflow: "hidden",
     textOverflow: "ellipsis",
-
     "::placeholder": {
         color: themes.hover,
     }
@@ -31,7 +30,7 @@ export const searchButtonStyle = style ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "48px",
+    minWidth: "48px",
     height: "48px",
     borderRadius: "10px",
     border: "none",

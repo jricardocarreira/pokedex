@@ -11,7 +11,14 @@ export const footerStyle = style({
     height: vars.space.large,
     padding: `0 ${vars.space.large}`,
     backgroundColor: themes.cardsBackground,
-    gap: vars.space.extraSmall
+    gap: vars.space.extraSmall,
+
+    "@media (max-width: 768px)": {
+        padding: `${vars.space.medium} ${vars.space.medium}`,
+    },
+    "@media (max-width: 480px)": {
+        padding: `${vars.space.medium} ${vars.space.small}`,
+    }
 })
 
 export const socialNavStyle = style({
@@ -20,6 +27,7 @@ export const socialNavStyle = style({
 })
 
 export const madeByCreatorStyle = style({
+    textAlign: "center",
     fontSize: vars.fontSize.small,
     color: themes.text,
 })

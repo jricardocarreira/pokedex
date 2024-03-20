@@ -9,8 +9,7 @@ export const subsequentsPokemonStyle = style ({
     flexDirection: "row-reverse",
     backgroundColor: themes.background,
     width: "100%",
-    gap: vars.space.medium,
-    flexWrap: "wrap"
+    gap: vars.space.extraSmall
 })
 
 export const subsequentsPokemonLinksStyle = style ({
@@ -20,7 +19,8 @@ export const subsequentsPokemonLinksStyle = style ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: `${vars.space.extraSmall} ${vars.space.medium}`,
+    width: "224px",
+    padding: `${vars.space.extraSmall} ${vars.space.small}`,
     gap: vars.space.extraSmall,
     borderRadius: "5px",
     boxShadow: vars.shadows.default,

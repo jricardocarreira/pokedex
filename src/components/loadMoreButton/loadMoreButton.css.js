@@ -9,7 +9,7 @@ export const loadMoreButtonStyle = style({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "350px",
+    width: "288px",
     height: "48px",
     borderRadius: "10px",
     border: "none",

@@ -13,6 +13,7 @@ globalStyle('*', {
 globalStyle('#app', {
   display: "flex",
   flexDirection: "column",
+  alignItems: "center",
   minHeight: "100vh"
 })
 

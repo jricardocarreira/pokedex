@@ -8,7 +8,15 @@ export const pokemonMainSectionStyle = style ({
     alignItems: "center",
     flexGrow: 1,
     width: "100%",
+    maxWidth: "1920px",
     padding: `${vars.space.medium} ${vars.space.large}`,
     gap: vars.space.medium,
-    backgroundColor: themes.background
+    backgroundColor: themes.background,
+
+    "@media (max-width: 768px)": {
+        padding: `${vars.space.medium} ${vars.space.medium}`,
+    },
+    "@media (max-width: 480px)": {
+        padding: `${vars.space.medium} ${vars.space.small}`,
+    }
 })

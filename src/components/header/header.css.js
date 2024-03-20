@@ -9,7 +9,14 @@ export const headerStyle = style ({
     width: "100%",
     height: vars.space.mediumLarge,
     padding: `0 ${vars.space.large}`,
-    backgroundColor: themes.cardsBackground
+    backgroundColor: themes.cardsBackground,
+
+    "@media (max-width: 768px)": {
+        padding: `0 ${vars.space.medium}`,
+    },
+    "@media (max-width: 480px)": {
+        padding: `0 ${vars.space.small}`,
+    }
 })
 
 export const headingStyle = style ({

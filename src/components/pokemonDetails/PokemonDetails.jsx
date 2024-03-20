@@ -61,7 +61,6 @@ export const PokemonDetails = () => {
 
   return (
     <div className={pokemonDetaisStyle}>
-
       <div className={mainPokemonDetailsContainerStyle}>
         <img className={detailsImageStyle} src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
         <div className={pokemonNameTypesContainerStyle}>
