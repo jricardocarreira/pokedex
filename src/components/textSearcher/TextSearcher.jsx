@@ -29,7 +29,7 @@ export const TextSearcher = ({ onSearch }) => {
       />
 
       <button className={searchButtonStyle} onClick={handleSearch}>
-        <img src="/public/search-icon.svg" alt="Click to search icon" />
+        <img src="/search-icon.svg" alt="Click to search icon" />
       </button>
     </div>
   );
