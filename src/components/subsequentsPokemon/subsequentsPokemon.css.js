@@ -30,7 +30,4 @@ export const subsequentsPokemonLinksStyle = style ({
         transform: "scale(0.98)",
         boxShadow: vars.shadows.active,
     },
-    "p + img": {
-        transform: "rotate(180deg)",
-    }
 })

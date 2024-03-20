@@ -34,15 +34,15 @@ Pokédex is a Single Page Application (SPA) developed in React.js that allows us
 
 Main Page
 
-<img src='./src/assets/pokedex-loadmore-filter.gif'><br>
+<img src='./public/pokedex-loadmore-filter.gif'><br>
 
 Pokémon Details Page
 
-<img src='./src/assets/pokemon-details.gif'><br>
+<img src='./public/pokemon-details.gif'><br>
 
 Theme Toggler
 
-<img src='./src/assets/pokedex-theme-toggler.gif'>
+<img src='./public/pokedex-theme-toggler.gif'>
 
 ## Link
 
@@ -66,7 +66,7 @@ Project on GitHub Pages: [Pokédex](jricardocarreira.github.io/pokedex/)
 
 ## Contact
 
-<a href="https://instagram.com/jricardocarreira" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+<a href="https://instagram.com/bug063" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
 <a href = "mailto:jricardocarreira@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/jricardocarreira" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
  
