@@ -10,6 +10,7 @@ Pokédex is a Single Page Application (SPA) developed in React.js that allows us
 - Pokémon search by name and ID
 - Pokémon filtering by type
 - Viewing details of each Pokémon, including moves and abilities
+- Responsive Web Design
 
 ## Technologies Used
 
@@ -46,7 +47,7 @@ Theme Toggler
 
 ## Deploy
 
-Project URL: [Pokédex](https://pokedex-jricardocarreira.vercel.app/)
+Access and test my project: [Pokédex](https://pokedex-jricardocarreira.vercel.app/)
 
 ## How to Run the Project
 
