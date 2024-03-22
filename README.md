@@ -44,9 +44,9 @@ Theme Toggler
 
 <img src='./public/pokedex-theme-toggler.gif'>
 
-## Link
+## Deploy
 
-Project on GitHub Pages: [Pokédex](jricardocarreira.github.io/pokedex/)
+Project URL: [Pokédex](https://pokedex-jricardocarreira.vercel.app/)
 
 ## How to Run the Project
 
